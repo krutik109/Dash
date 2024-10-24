@@ -1,0 +1,109 @@
+.mainColor{
+  color: #FE512E;
+  
+}.mainColor2{
+  background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
+}
+.RegImg{
+  width: 568px;
+  height: 622px;
+}
+.logo{
+  width: 253px;
+  height: 68px;
+}
+.registration-background {
+  background-image: url("src/Images/RegFormBackImg.png");
+  /* Use the correct path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #f58220;
+  border-color: #f58220;
+}
+
+.btn-primary:hover {
+  background-color: #e76b0c;
+  border-color: #e76b0c;
+}
+.create-society-btn {
+  background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.create-society-btn:hover {
+  background-color: #e76b0c;
+}
+/* styles.css */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.society-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.society-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.society-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.form-buttons button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
