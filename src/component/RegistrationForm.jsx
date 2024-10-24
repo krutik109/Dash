@@ -68,7 +68,7 @@ const RegistrationForm = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                  />
+                  />                                            
                 </div>
                 <div className="col-md-6 mb-3">
                   <label htmlFor="lastName" className="form-label">
@@ -248,7 +248,7 @@ const RegistrationForm = () => {
                 </label>
               </div>
 
-              <button type="submit" className="btn btn-primary w-100 mainColor2">
+              <button type="submit" className="btn btn-primary w-100" style={{backgroundColor: "lightgray"}}>
                 Register
               </button>
 

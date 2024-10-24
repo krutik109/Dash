@@ -4,6 +4,9 @@
 }.mainColor2{
   background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
 }
+.registerbtn{
+  color: #f6f8fb;
+}
 .RegImg{
   width: 568px;
   height: 622px;
@@ -106,4 +109,61 @@
 .form-buttons button[type="button"] {
   background-color: #6c757d;
   color: white;
+}
+ul li{
+  list-style: none;
+  text-decoration: none;
+}
+.no-underline {
+  text-decoration: none;
+}
+/* App.css */
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light background for contrast */
+  min-height: 100vh; /* Ensure full height */
+}
+.Navbar{
+  display: none;
+}
+
+
+/* Ensure full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header should take up the full width */
+header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure header stays on top */
+}
+
+/* Flex container for Sidebar and Main content */
+.main-layout {
+  display: flex;
+  height: calc(100vh - 60px); /* Subtract header height (e.g., 60px) */
+}
+
+/* Sidebar fixed width */
+.SideBar {
+  width: 280px;
+  background-color: #f8f9fa; /* Sidebar background color */
+}
+
+/* Main content should expand to take remaining space */
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+.Navbar{
+  width: 1640px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
