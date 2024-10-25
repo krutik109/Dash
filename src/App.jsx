@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import RegistrationForm from './component/RegistrationForm';
+
 import CreateSocietyForm from './component/CreateSocietyForm';
 import SideBar from './component/SideBar';
 import ResidentManagement from './pages/ResidentManagement';
@@ -16,7 +16,7 @@ function App() {
     <Header />
         <Routes>
           {/* Your route components */}
-          <Route path='/createSociety' element={<CreateSocietyForm />} />
+          <Route path='/ ' element={<CreateSocietyForm />} />
           <Route path='/residentmanagement' element={<ResidentManagement />} />
           <Route path='/financialmanagement' element={<FinancialManagement />} />
         </Routes>

@@ -32,7 +32,7 @@ const CreateSocietyForm2 = () => {
   const handleCancel = () => {
     setFormData({
       societyName: '',
-      societyAddress: '',
+      address: '',
       country: '',
       state: '',
       city: '',
@@ -60,9 +60,9 @@ const CreateSocietyForm2 = () => {
         <label>Society Address*</label>
         <input
           type="text"
-          name="societyAddress"
+          name="address"
           placeholder="Enter Address"
-          value={formData.societyAddress}
+          value={formData.address}
           onChange={handleChange}
           required
         />

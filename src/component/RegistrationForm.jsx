@@ -9,7 +9,7 @@ const RegistrationForm = () => {
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     country: "",
     state: "",
     city: "",
@@ -110,8 +110,8 @@ const RegistrationForm = () => {
                   <input
                     type="tel"
                     className="form-control"
-                    id="phone"
-                    name="phone"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     placeholder="91+"
                     value={formData.phone}
                     onChange={handleChange}
