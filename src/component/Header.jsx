@@ -99,7 +99,7 @@ const Header = () => {
                 className="d-flex align-items-center"
               >
                 <img
-                  src="src\Images\image.png"
+                  src="src\Images\Profileimg.png"
                   alt="User"
                   className="rounded-circle me-2 img-fluid"
                   width="40"

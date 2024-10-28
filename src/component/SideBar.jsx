@@ -29,7 +29,7 @@ const SideBar = () => {
           <ul className="list-unstyled">
             {/* Dashboard */}
             <li className="p-3 mainColor2 rounded ">
-  <Link to="/" className="d-flex align-items-center " style={{ textDecoration: "none", color: "black" }}>
+  <Link to="/dashboard" className="d-flex align-items-center " style={{ textDecoration: "none", color: "black" }}>
     <FaTh className="me-3" />  {/* Dashboard Icon */}
     <span className="text-dark">Dashboard</span>
   </Link>
