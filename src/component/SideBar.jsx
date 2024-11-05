@@ -28,7 +28,7 @@ const SideBar = () => {
         <div className="offcanvas-body p-0">
           <ul className="list-unstyled">
             {/* Dashboard */}
-            <li className="p-3 mainColor2 rounded ">
+            <li className="p-3  rounded hovermaincolor">
   <Link to="/dashboard" className="d-flex align-items-center " style={{ textDecoration: "none", color: "black" }}>
     <FaTh className="me-3" />  {/* Dashboard Icon */}
     <span className="text-dark">Dashboard</span>
@@ -36,43 +36,43 @@ const SideBar = () => {
 </li>
 
             {/* Menu Items */}
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/residentmanagement" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaUser className="me-3" />
                 <span>Resident Management</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/financialmanagement" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaDollarSign className="me-3" />
                 <span>Financial Management</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/facility-management" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaBuilding className="me-3" />
                 <span>Facility Management</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/complaint-tracking" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaExclamationCircle className="me-3" />
                 <span>Complaint Tracking</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/security-management" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaShieldAlt className="me-3" />
                 <span>Security Management</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/security-guard" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaShieldAlt className="me-3" />
                 <span>Security Guard</span>
               </Link>
             </li>
-            <li className="p-3">
+            <li className="p-3 hovermaincolor">
               <Link to="/announcement" className="d-flex align-items-center text-dark" style={{ textDecoration: "none" }}>
                 <FaBullhorn className="me-3" />
                 <span>Announcement</span>
