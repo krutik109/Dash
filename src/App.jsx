@@ -11,12 +11,13 @@ import DashBoard from './pages/DashBoard';
 
 import ResidentForm from './pages/ResidentForm';
 import TenantForm from './pages/TenantForm';
+import OtherIncome from './pages/OtherIncome';
 
 function App() {
   return (
     <div className="d-flex"> {/* Flexbox container to position sidebar and content side by side */}
       {/* Main content area */}
-      <div className="content-area" style={{ marginLeft: '290px', padding: '20px', width: '100%' }}> 
+      <div className="content-area" style={{ marginLeft: '290px', padding: '20px', width: '100%', backgroundColor: '#f5f5f5'}}> 
       <SideBar />
     <Header />
         <Routes>
@@ -33,6 +34,7 @@ function App() {
           <Route path='/addresidents' element={<ResidentForm />} />
           <Route path='/financialmanagement' element={<FinancialManagement />} />
           <Route path='/dashboard' element={<DashBoard />} />
+          <Route path='/otherincome' element={<OtherIncome />} />
         </Routes>
       </div>
     </div>

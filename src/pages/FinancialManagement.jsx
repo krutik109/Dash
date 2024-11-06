@@ -3,7 +3,7 @@ import './FinancialManagement.css';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaEye, FaRegEyeSlash } from 'react-icons/fa';
-import { MdOutlineCurrencyRupee } from 'react-icons/md';
+import { MdOutlineCurrencyRupee, MdPerson } from 'react-icons/md';
 
 
 const FinancialManagement = () => {
@@ -24,12 +24,12 @@ const FinancialManagement = () => {
 
   return (<>
     <div className="">
-    <Link to={"/Maintanance"}>  <button className=" hovermaincolor rounded-top border-bottom border-danger btn btn">Maintanance</button></Link> 
-      <Link to="/otherincome"><button  className=" hovermaincolor rounded-top  btn  border-bottom border-danger">Other Income</button></Link>
+    <Link to={"/financialmanagement"}>  <button className=" hovermaincolor rounded-top  bg-white  border-bottom border-danger btn "><span style={{ color: "black",  fontSize: "16px" }}>  Maintanance </span></button></Link> 
+      <Link to="/otherincome"><button  className=" hovermaincolor rounded-top bg-white  btn  border-bottom border-danger"><span style={{ color: "black",  fontSize: "16px" }}>  Other Income </span></button></Link>
 </div>
     <div className="container-fluid rounded " style={{backgroundColor:" #f5f5f5 ", border:"none"}}>
        
-    <div className=" bg- p-2 ">
+    <div className=" p-2 ">
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h4>financial Details</h4>
         {/* Button to open modal */}
@@ -60,7 +60,7 @@ const FinancialManagement = () => {
               <td>{resident.date}</td>
               <td>
                 <span className={resident.Status === "Occupied" ? "badge occupied" : "badge vacate"}>
-                  {resident.Status}
+                <MdPerson />{resident.Status}
                 </span>
               </td>
               <td>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './ResidentManagement.css';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { FaRegEdit } from 'react-icons/fa';
+import { GrView } from 'react-icons/gr';
 
 
 const ResidentDetailsTable = () => {
@@ -55,8 +57,9 @@ const ResidentDetailsTable = () => {
               <td>{resident.members}</td>
               <td>{resident.vehicles}</td>
               <td>
-                <button className="btn edit-btn">Edit</button>
-                <button className="btn view-btn">View</button>
+                <button className="btn edit-btn"><FaRegEdit   />
+                </button>
+                <button className="btn view-btn "><GrView   /></button>
               </td>
             </tr>
           ))}
