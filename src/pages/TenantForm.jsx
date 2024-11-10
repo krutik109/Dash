@@ -64,7 +64,7 @@ const TenantForm = () => {
         <div className="container-fluid form-container" style={{ backgroundColor: "#eff4f9" }}>
             <div className="row justify-content-center ">
                 <div className="">
-                <Link to="/ownerForm"><button className="rounded-top border-top-only btn">Owner</button></Link>
+                <Link to="/ownerForm"><button className="rounded-top text-dark bg-white border-top-only btn">Owner</button></Link>
                <Link to="/TenantForm"><button className="mainColor2 rounded-top border-top-only btn">Tenant</button></Link>
 
                <div className="row mb-3">

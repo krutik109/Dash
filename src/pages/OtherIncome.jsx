@@ -175,7 +175,7 @@ const styles2 = {
           </div>
           {showMenu && (
             <div style={styles1.dropdownMenu}>
-              <div style={styles1.dropdownItem}>  <button className="btn " onClick={handleShowEditModal}>
+              <div style={styles1.dropdownItem}>  <button className="btn  " onClick={handleShowEditModal}>
             Edit
           </button></div>
               <div style={styles1.dropdownItem}> <button className="btn " onClick={handleShowViewModal}>

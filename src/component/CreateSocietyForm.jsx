@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./CreateSocietyForm.css"
 
 
 const CreateSocietyForm2 = () => {

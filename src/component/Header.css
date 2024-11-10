@@ -1,4 +1,4 @@
-.notification-dropdown {
+/* .notification-dropdown {
     border-radius: 8px;
     z-index: 1000;
     max-height: 300px;
@@ -29,5 +29,27 @@
   .badge {
     font-size: 0.75rem;
   }
+  .Navbar{
+    display: none;
+  }
   
+  header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header stays on top */
+  /* }
+  .Navbar{
+    max-width: 1640px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  } */
+/* 
   
+@media (max-width: 608px) {
+ 
+
+  .d-sm-block{
+    display: none;
+  }
+} */ 

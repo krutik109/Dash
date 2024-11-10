@@ -1,0 +1,37 @@
+.RegImg{
+    width: 568px;
+    height: 622px;
+  }
+  .logo{
+    width: 253px;
+    height: 68px;
+  }
+  .registration-background {
+    background-image: url("src/Images/RegFormBackImg.png");
+    /* Use the correct path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .registration-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  .create-society-btn {
+    background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .create-society-btn:hover {
+    background-color: #e76b0c;
+  }
+  

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import CreateSocietyForm from "./CreateSocietyForm";
-
+import "./RegistrationForm.css"
 
 const RegistrationForm = () => {
   // State to store form data

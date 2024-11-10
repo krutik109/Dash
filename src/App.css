@@ -7,33 +7,20 @@
 .registerbtn{
   color: #f6f8fb;
 }
-.RegImg{
-  width: 568px;
-  height: 622px;
-}
-.logo{
-  width: 253px;
-  height: 68px;
-}
-.registration-background {
-  background-image: url("src/Images/RegFormBackImg.png");
-  /* Use the correct path */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.btn {
+  color: #333; /* Dark text color */
 }
 
-.registration-container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 .form-label {
   font-weight: bold;
@@ -48,68 +35,11 @@
   background-color: #e76b0c;
   border-color: #e76b0c;
 }
-.create-society-btn {
-  background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
-  border: none;
-  color: white;
-  font-weight: bold;
-}
 
-.create-society-btn:hover {
-  background-color: #e76b0c;
-}
 /* styles.css */
-.form-container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.society-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
-.society-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-}
 
-.society-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.form-buttons {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form-buttons button {
-  padding: 10px 15px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.form-buttons button[type="submit"] {
-  background-color: #007bff;
-  color: white;
-}
-
-.form-buttons button[type="button"] {
-  background-color: #6c757d;
-  color: white;
-}
 ul li{
   list-style: none;
   text-decoration: none;
@@ -124,38 +54,16 @@ ul li{
   background-color: #f5f5f5; /* Light background for contrast */
   min-height: 100vh; /* Ensure full height */
 }
-.Navbar{
-  display: none;
-}
 
 
 /* Ensure full viewport height */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 /* Header should take up the full width */
-header {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure header stays on top */
-}
 
 /* Flex container for Sidebar and Main content */
-.main-layout {
-  display: flex;
-  height: calc(100vh - 60px); /* Subtract header height (e.g., 60px) */
-}
 
 /* Sidebar fixed width */
-.SideBar {
-  width: 280px;
-  background-color: #f8f9fa; /* Sidebar background color */
-}
+
 
 /* Main content should expand to take remaining space */
 .content-area {
@@ -163,10 +71,7 @@ header {
   padding: 20px;
   background-color: #fff;
 }
-.Navbar{
-  width: 1640px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 .img-font{
   font-size:12px;
 }

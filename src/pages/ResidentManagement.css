@@ -1,189 +1,135 @@
 .custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .custom-table th {
-    background-color: #f8f9fa;
-    color: #555;
-    padding: 15px;
-    text-align: left;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #e6e6e6;
-  }
-  
-  .custom-table th:first-child {
-    border-top-left-radius: 8px;
-  }
-  
-  .custom-table th:last-child {
-    border-top-right-radius: 8px;
-  }
-  
-  .custom-table td {
-    padding: 10px 15px;
-    color: #333;
-    border-bottom: 1px solid #e6e6e6;
-    font-size: 14px;
-  }
-  
-  .custom-table td .badge {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    text-transform: capitalize;
-  }
-  
-  .badge.occupied {
-    background-color: #dff0d8;
-    color: #3c763d;
-  }
-  
-  .badge.vacate {
-    background-color: #f9c2c2;
-    color: #a94442;
-  }
-  
-  .badge.tenant {
-    background-color: #c9e2f7;
-    color: #31708f;
-  }
-  
-  .badge.owner {
-    background-color: #d9edf7;
-    color: #31708f;
-  }
-  
-  .btn {
-    font-size: 12px;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .edit-btn {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .view-btn {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-warning {
-    background-color: #ffc107;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  /* General table styles */
-.custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  
-  .custom-table th, .custom-table td {
-    padding: 12px;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-  }
-  
-  /* Badge styles for unit and resident status */
-  .badge {
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    color: #fff;
-  }
-  
-  .badge.occupied {
-    background-color: rgba(20, 184, 166, 1);/* Green for Occupied */
-    color: #fff;
-    
-  }
-  
-  .badge.vacate {
-    background-color:rgba(147, 51, 234, 1);/* Yellow for Vacate */
-color: white;  }
-  
-  .badge.tenant {
-   background-color: rgba(236, 72, 153, 1); /* Blue for Tenant */
-   color: #fff;
-  }
-  
-  .badge.owner {
-    background-color:rgba(79, 70, 229, 1); /* Purple for Owner */
-    color: #fff;
-  }
-  
-  /* Responsive table */
-  .table-responsive {
-    width: 100%;
-    overflow-x: auto;
-  }
-  
-  /* Button styles */
-  .edit-btn {
-    background-color: #28a745;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  .view-btn {
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  /* Media Queries for smaller screens */
-  @media (max-width: 768px) {
-    .custom-table thead {
-      display: none; /* Hide table headers */
-    }
-  
-    .custom-table tbody tr {
-      display: block;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #ddd;
-    }
-  
-    .custom-table tbody td {
-      display: block;
-      text-align: right;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    .custom-table tbody td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 0;
-      padding-left: 15px;
-      font-weight: bold;
-      text-align: left;
-    }
-  
-    .custom-table tbody td:last-child {
-      border-bottom: 0;
-    }
-  }
-  .rmHead th{
-    background-color:#eef1fd;
-    color: #555;
-    
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.custom-table th, .custom-table td {
+  padding: 12px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.table thead th {
+  color: #555;
+  background-color: #eef1fd;
+}
+.custom-table th {
+  background-color: #eef1fd;
+  color: #555;
+}
+
+
+/* radio `accent-color` */
+
+.radio-option{
+ font-style: italic;
+ font-weight: 600;
+}
+.radio-option input[type="radio"] {
+  accent-color: #F09619;
+}
+
+.agreement-checkbox input[type="checkbox"] {
+  accent-color: #F09619;
+}
+
+
+
+
+.custom-table td .badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: #fff;
+}
+
+.badge.occupied {
+  background-color: rgba(20, 184, 166, 1); /* Green */
+}
+
+.badge.vacate {
+  background-color: rgba(147, 51, 234, 1); /* Purple */
+}
+
+.badge.tenant {
+  background-color: rgba(236, 72, 153, 1); /* Pink */
+}
+
+.badge.owner {
+  background-color: rgba(79, 70, 229, 1); /* Blue */
+}
+
+.btn {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #28a745;
+}
+
+.view-btn {
+  background-color: #007bff;
+}
+
+/* Responsive table styles */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .custom-table thead {
+    display: none;
 
   }
-  .wing{
-    color: rgba(86, 120, 233, 1);
-    font-weight: 500;
+
+  .custom-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .custom-table tbody td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .custom-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+@media (max-width: 375px) {
+.modal-dialog{
+ 
+}
+.addreidentbtn{
+  width: 100px;
+  text-wrap: wrap;
+  
+}
+
+
+}
+@media (max-width: 576px) {
+  .modal-dialog{
+   display: flex;
+    justify-content: center;
+  }
+  
   }

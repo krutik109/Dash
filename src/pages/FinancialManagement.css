@@ -1,18 +1,16 @@
 .custom-table {
     width: 100%;
-    border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .custom-table th {
-    background-color: #f8f9fa;
+    background-color: #eef1fd;
     color: #555;
     padding: 15px;
     text-align: left;
     font-weight: bold;
     font-size: 14px;
-    text-transform: uppercase;
     border-bottom: 2px solid #e6e6e6;
   }
   
@@ -27,7 +25,6 @@
   .custom-table td {
     padding: 10px 15px;
     color: #333;
-    border-bottom: 1px solid #e6e6e6;
     font-size: 14px;
   }
   
@@ -88,14 +85,12 @@
   /* General table styles */
 .custom-table {
     width: 100%;
-    border-collapse: collapse;
     text-align: center;
   }
   
   .custom-table th, .custom-table td {
     padding: 12px;
     vertical-align: middle;
-    border: 1px solid #ddd;
   }
   
   /* Badge styles for unit and resident status */
@@ -146,37 +141,16 @@ color: white;  }
   }
   
   /* Media Queries for smaller screens */
-  @media (max-width: 768px) {
-    .custom-table thead {
-      display: none; /* Hide table headers */
+  @media (max-width: 375px) {
+    .modal{
+      
+      background-color: transparent;
+
     }
   
-    .custom-table tbody tr {
-      display: block;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #ddd;
-    }
-  
-    .custom-table tbody td {
-      display: block;
-      text-align: right;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    .custom-table tbody td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 0;
-      padding-left: 15px;
-      font-weight: bold;
-      text-align: left;
-    }
-  
-    .custom-table tbody td:last-child {
-      border-bottom: 0;
-    }
   }
+
+
   .rmHead th{
     background-color:#eef1fd;
     color: #555;
@@ -191,3 +165,187 @@ color: white;  }
     background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
   border-radius: 8px;
   }
+  /* Remove border from table, th, and td */
+.custom-table {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none; /* Remove border from the table */
+}
+
+.custom-table th,
+.custom-table td {
+  border: none; /* Remove borders from table header and data cells */
+}
+
+/* Additional table styles for cleaner look */
+.custom-table thead tr {
+  border-bottom: 2px solid #e6e6e6; /* Optional: retain a bottom border for the header */
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #e6e6e6; /* Optional: retain a bottom border for each row */
+}
+
+/* Remove specific border settings */
+.rmHead th {
+  background-color: #eef1fd;
+  color: #555;
+  border: none; /* Remove any border */
+}
+
+/* For thead if using additional classes */
+.table-responsive .border, 
+.table-responsive .border-0 {
+  border: none;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.custom-table {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none; /* Remove border from the table */
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  border: none; /* Remove borders */
+}
+
+/* Optional: add bottom border styling for table headers and rows */
+.custom-table thead tr {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Media query for smaller screens */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.custom-table {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none; /* Remove border from the table */
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  border: none; /* Remove borders */
+}
+
+/* Optional: add bottom border styling for table headers and rows */
+.custom-table thead tr {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+@media (max-width: 608px) {
+ 
+
+  .buttons{
+    display: flex;
+    position: relative;
+    width: 100%;
+    
+  }
+  .buttons .otherincomebtn{
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .buttons .maintnanancebtn{
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .maintnanancebtn{
+    width: auto;
+   text-align: center;
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    
+  }
+  .otherincomebtn{
+    width: auto;
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .custom-table thead {
+    display: none; /* Optionally hide table headers on smaller screens */
+  }
+
+  .custom-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .custom-table tbody td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+    border: 1px solid #ddd;
+  }
+
+  .custom-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Remove the native icon in browsers */
+.date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
+/* Position the custom icon */
+.custom-date-icon {
+  position: absolute;
+  right: 10px; /* Adjust to position within input box */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000; /* Icon color */
+  pointer-events: none; /* Prevent icon from blocking clicks */
+}

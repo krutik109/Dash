@@ -1,133 +1,166 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Dropdown, Button, InputGroup, FormControl, Container } from 'react-bootstrap';
-import { FiSearch } from "react-icons/fi";
-import "./Header.css";
+// import React, { useState } from 'react';
+// import { Navbar, Nav, Dropdown, Button, InputGroup, FormControl, Container } from 'react-bootstrap';
+// import { FiSearch } from "react-icons/fi";
+// import "./Header.css";
 
-const Header = () => {
-  const [notifications, setNotifications] = useState([
-    'New habit reminder',
-    'Goal achieved!',
-    'Don\'t forget to update your progress'
-  ]);
-  const [showNotifications, setShowNotifications] = useState(false);
+// const Header = () => {
+//   const [notifications, setNotifications] = useState([
+//     'New habit reminder',
+//     'Goal achieved!',
+//     'Don\'t forget to update your progress'
+//   ]);
+//   const [showNotifications, setShowNotifications] = useState(false);
 
-  const toggleNotifications = () => {
-    setShowNotifications(!showNotifications);
-  };
+//   const toggleNotifications = () => {
+//     setShowNotifications(!showNotifications);
+//   };
 
-  const clearNotifications = () => {
-    setNotifications([]);
-    setShowNotifications(false);
-  };
+//   const clearNotifications = () => {
+//     setNotifications([]);
+//     setShowNotifications(false);
+//   };
 
+//   return (
+//     <>
+//     <div className='header '>
+
+//     <Navbar expand="sm" style={{height:"100px"}} className="  mb-3 bg-white  rounded border-bottom">
+//       <Container fluid className='bg-white ' >
+//         {/* Search Bar */}
+//         <Navbar.Brand className="w-20 d-sm-block">
+//           <InputGroup className="mb-5">
+//             <InputGroup.Text className='m'>
+//               <FiSearch />
+//             </InputGroup.Text>
+//             <FormControl
+//               className="border-start-0 "
+//               placeholder="Search Here"
+//               aria-label="Search"
+//               />
+//           </InputGroup>
+//         </Navbar.Brand>
+
+//         {/* Toggle Button for Small Screens */}
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+//         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end mb-5">
+//           <Nav className="d-flex align-items-center">
+//             {/* Notification Icon */}
+//             <Button
+//               variant=""
+//               className="position-relative me-3"
+//               onClick={toggleNotifications}
+//               >
+//               <img
+//                 src="src\Images\Notification.png"
+//                 alt=""
+//                 width="40"
+//                 height="40"
+//                 className="img-fluid"
+//                 />
+//               {notifications.length > 0 && (
+//                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+//                   {notifications.length}
+//                 </span>
+//               )}
+//             </Button>
+
+//             {/* Notification Dropdown */}
+//             {showNotifications && (
+//                 <div
+//                 className="notification-dropdown position-absolute bg-white border shadow p-3"
+//                 style={{ right: '60px', top: '60px', width: '300px', zIndex: 1000 }}
+//                 >
+//                 <div className="d-flex justify-content-between">
+//                   <h6 className="mb-0">Notifications</h6>
+//                   <Button variant="link" size="sm" onClick={clearNotifications}>
+//                     Clear All
+//                   </Button>
+//                 </div>
+//                 <ul className="list-unstyled mt-3">
+//                   {notifications.length > 0 ? (
+//                       notifications.map((notification, index) => (
+//                           <li key={index} className="border-bottom py-2">
+//                         {notification}
+//                       </li>
+//                     ))
+//                 ) : (
+//                     <li className="text-muted">No new notifications</li>
+//                 )}
+//                 </ul>
+//               </div>
+//             )}
+
+//             {/* User Profile */}
+//             <Dropdown align="end">
+//               <Dropdown.Toggle
+//                 variant="light"
+//                 id="dropdown-basic"
+//                 className="d-flex align-items-center"
+//               >
+//                 <img
+//                   src="src\Images\Profileimg.png"
+//                   alt="User"
+//                   className="rounded-circle me-2 img-fluid"
+//                   width="40"
+//                   height="40"
+//                   />
+//                 <div>
+//                   <span>Moni Roy</span>
+//                   <br />
+//                   <span className="text-muted" style={{ fontSize: '12px' }}>Admin</span>
+//                 </div>
+//               </Dropdown.Toggle>
+
+//               <Dropdown.Menu>
+//                 <Dropdown.Item href="#/profile">Profile</Dropdown.Item>
+//                 <Dropdown.Item href="#/settings">Settings</Dropdown.Item>
+//                 <Dropdown.Item href="#/logout">Logout</Dropdown.Item>
+//               </Dropdown.Menu>
+//             </Dropdown>
+            
+//           </Nav>
+//         </Navbar.Collapse>
+        
+//       </Container>
+//     </Navbar>
+    
+//     </div>
+
+//                   </>
+//   );
+// };
+
+// export default Header;
+
+
+
+import React from 'react';
+import './Header.css';
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
+const Header = ({ toggleSidebar }) => {
   return (
     <>
-    <div className='header '>
+      <div className="row d-flex justify-content-between align-items-center mt-3 mb-3">
+        {/* Hamburger icon for small screens */}
+        <div className="col-auto d-md-none">
+          <button  className="btn text-dark" onClick={toggleSidebar}>
+            <RxHamburgerMenu  />       {/* Bootstrap icon for hamburger menu */}
+          </button>
+        </div>
 
-    <Navbar expand="sm" style={{height:"100px"}} className="  mb-3 bg-white  rounded border-bottom">
-      <Container fluid className='bg-white ' >
-        {/* Search Bar */}
-        <Navbar.Brand className="w-20 d-sm-block">
-          <InputGroup className="mb-5">
-            <InputGroup.Text className='m'>
-              <FiSearch />
-            </InputGroup.Text>
-            <FormControl
-              className="border-start-0 "
-              placeholder="Search Here"
-              aria-label="Search"
-              />
-          </InputGroup>
-        </Navbar.Brand>
-
-        {/* Toggle Button for Small Screens */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end mb-5">
-          <Nav className="d-flex align-items-center">
-            {/* Notification Icon */}
-            <Button
-              variant=""
-              className="position-relative me-3"
-              onClick={toggleNotifications}
-              >
-              <img
-                src="src\Images\Notification.png"
-                alt=""
-                width="40"
-                height="40"
-                className="img-fluid"
-                />
-              {notifications.length > 0 && (
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  {notifications.length}
-                </span>
-              )}
-            </Button>
-
-            {/* Notification Dropdown */}
-            {showNotifications && (
-                <div
-                className="notification-dropdown position-absolute bg-white border shadow p-3"
-                style={{ right: '60px', top: '60px', width: '300px', zIndex: 1000 }}
-                >
-                <div className="d-flex justify-content-between">
-                  <h6 className="mb-0">Notifications</h6>
-                  <Button variant="link" size="sm" onClick={clearNotifications}>
-                    Clear All
-                  </Button>
-                </div>
-                <ul className="list-unstyled mt-3">
-                  {notifications.length > 0 ? (
-                      notifications.map((notification, index) => (
-                          <li key={index} className="border-bottom py-2">
-                        {notification}
-                      </li>
-                    ))
-                ) : (
-                    <li className="text-muted">No new notifications</li>
-                )}
-                </ul>
-              </div>
-            )}
-
-            {/* User Profile */}
-            <Dropdown align="end">
-              <Dropdown.Toggle
-                variant="light"
-                id="dropdown-basic"
-                className="d-flex align-items-center"
-              >
-                <img
-                  src="src\Images\Profileimg.png"
-                  alt="User"
-                  className="rounded-circle me-2 img-fluid"
-                  width="40"
-                  height="40"
-                  />
-                <div>
-                  <span>Moni Roy</span>
-                  <br />
-                  <span className="text-muted" style={{ fontSize: '12px' }}>Admin</span>
-                </div>
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/profile">Profile</Dropdown.Item>
-                <Dropdown.Item href="#/settings">Settings</Dropdown.Item>
-                <Dropdown.Item href="#/logout">Logout</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            
-          </Nav>
-        </Navbar.Collapse>
-        
-      </Container>
-    </Navbar>
-    
-    </div>
-
-                  </>
+        {/* Search bar and user profile (Visible across all screen sizes) */}
+        <div className="col">
+          <h3>Header</h3>
+        </div>
+        <div className="col-auto">
+          <i className="bi bi-person-circle"></i> {/* User icon */}
+        </div>
+      </div>
+      <hr />
+    </>
   );
 };
 

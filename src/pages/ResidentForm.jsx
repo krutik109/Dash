@@ -63,7 +63,7 @@ const ResidentForm = () => {
             <div className="row justify-content-center ">
                 <div className="">
              <Link to={"/OwnerForm"}>  <button className=" mainColor2 rounded-top border-top-only btn btn-primary">Owner</button></Link> 
-               <Link to="/TenantForm"><button className="  rounded-top border-top-only btn">Tenant</button></Link>
+               <Link to="/TenantForm"><button className=" text-dark bg-white rounded-top border-top-only btn">Tenant</button></Link>
                     <form onSubmit={handleSubmit} className=' border p-4 rounded shadow bg-white'>
                         {/* <h3 className="form-title mb-4">Owner/Tenant Information</h3> */}
 
