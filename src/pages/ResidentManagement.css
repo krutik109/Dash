@@ -1,6 +1,8 @@
+
+
+
 .custom-table {
   width: 100%;
-  border-collapse: collapse;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -9,7 +11,6 @@
 .custom-table th, .custom-table td {
   padding: 12px;
   vertical-align: middle;
-  border: 1px solid #ddd;
   color: #333;
 }
 .table thead th {
@@ -44,23 +45,28 @@
   border-radius: 5px;
   font-size: 12px;
   text-transform: lowercase;
-  color: #fff;
+ 
 }
 
 .badge.occupied {
-  background-color: rgba(20, 184, 166, 1); /* Green */
+  background-color:rgba(236, 255, 255, 1); 
+  color: rgba(20, 184, 166, 1);/* Green */
 }
 
 .badge.vacate {
-  background-color: rgba(147, 51, 234, 1); /* Purple */
+  background-color: rgba(255, 246, 255, 1); /* Purple */
+  color: rgba(147, 51, 234, 1);
 }
 
 .badge.tenant {
-  background-color: rgba(236, 72, 153, 1); /* Pink */
+
+  background-color: rgba(255, 241, 248, 1); /* Pink */
+  color:rgba(236, 72, 153, 1);
 }
 
 .badge.owner {
-  background-color: rgba(79, 70, 229, 1); /* Blue */
+background-color: rgba(241, 240, 255, 1);
+color: rgba(79, 70, 229, 1); /* Blue */
 }
 
 .btn {
@@ -115,9 +121,7 @@
   }
 }
 @media (max-width: 375px) {
-.modal-dialog{
- 
-}
+   
 .addreidentbtn{
   width: 100px;
   text-wrap: wrap;

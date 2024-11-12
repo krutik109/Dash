@@ -39,7 +39,7 @@ const RegistrationForm = () => {
     <div className="col-lg-12 d-flex flex-wrap mx-auto justify-content-center">
       {/* Left image */}
       <div className="col-lg-6 mb-5">
-        <h1 className="mt-4 mx-4 mainColor logo">
+        <h1 className="mt-4 mx-4 mainColor2 logo">
           Dash<span className="text-dark">Stack</span>
         </h1>
         <div className="container-fluid mx-5 mb-5">

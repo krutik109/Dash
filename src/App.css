@@ -8,10 +8,11 @@
   color: #f6f8fb;
 }
 
-.btn {
-  color: #333; /* Dark text color */
+.sidebarbtn{
+  width: 245px;
+  height: 52px;
+  
 }
-
 
 
 
@@ -26,15 +27,6 @@
   font-weight: bold;
 }
 
-.btn-primary {
-  background-color: #f58220;
-  border-color: #f58220;
-}
-
-.btn-primary:hover {
-  background-color: #e76b0c;
-  border-color: #e76b0c;
-}
 
 /* styles.css */
 
@@ -43,7 +35,7 @@
 ul li{
   list-style: none;
   text-decoration: none;
-}
+} 
 .no-underline {
   text-decoration: none;
 }
@@ -81,7 +73,12 @@ ul li{
 }
 
 .hovermaincolor:hover{
-
+color: white;
   background: linear-gradient(90deg, #FE512E 0%, #F09619 100%);
 border-radius: 8px;
 }
+
+
+/* 
+
+*/

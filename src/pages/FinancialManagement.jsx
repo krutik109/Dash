@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import "./FinancialManagement.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaEye, FaRegEyeSlash } from "react-icons/fa";
-import { MdOutlineCurrencyRupee, MdPerson } from "react-icons/md";
+import { FaRegEyeSlash } from "react-icons/fa";
 
 const FinancialManagement = () => {
   const [residents, setResidents] = useState([
     {
       name: "Evelyn Harper",
-      unitNumber: "A 1001",
+      wing: "A",
+      unitNumber: "1001",
       date: "2022/01/01",
       Status: "Tenant",
       PhoneNumber: "9876549876",
       Amount: "1000",
       Penalty: "250",
-      status: "Pendinng",
+      status: "Pending",
       Payment: "Online",
     },
     {
       name: "Evelyn Harper",
-      unitNumber: "A 1001",
+      wing: "A",
+      unitNumber: "1001",
       date: "2022/01/01",
-      Status: "Ownwer",
+      Status: "Owner",
       PhoneNumber: "9876549876",
       Amount: "1000",
       Penalty: "--",
@@ -31,13 +31,14 @@ const FinancialManagement = () => {
     },
     {
       name: "Evelyn Harper",
-      unitNumber: "A 1001",
+      wing: "A",
+      unitNumber: "1001",
       date: "2022/01/01",
       Status: "Tenant",
       PhoneNumber: "9876549876",
       Amount: "1000",
       Penalty: "250",
-      status: "Pendinng",
+      status: "Pending",
       Payment: "Online",
     },
   ]);
@@ -47,14 +48,16 @@ const FinancialManagement = () => {
 
   const [showAddModal, setShowAddModal] = useState(false);
   const handleShowAddModal = () => setShowAddModal(true);
+  const handleCloseAddModal = () => setShowAddModal(false);
+
   const [showAddmaintananceModal, setShowAddMaintananceModal] = useState(false);
   const handleshowAddmaintananceModal = () => setShowAddMaintananceModal(true);
-  const handleCloseAddModal = () => setShowAddModal(false);
   const handleCloseAddmaintananceModal = () =>
     setShowAddMaintananceModal(false);
 
   return (
     <>
+      <div></div>
       <div className="buttons d-flex">
         <Link to={"/financialmanagement"}>
           {" "}
@@ -80,22 +83,21 @@ const FinancialManagement = () => {
       >
         <div className=" p-2 ">
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <h4>financial Details</h4>
+            <h4>Maintanance Details</h4>
             {/* Button to open modal */}
-            <button className="btn btn-primary" onClick={handleShowAddModal}>
+            <button style={{
+              width: "200px",
+              height: "50px",
+              fontStyle: "poppins",
+              fontWeight: "500",
+            }} className="btn  mainColor2" onClick={handleShowAddModal}>
               Set Maintanance
             </button>
           </div>
           <div className="table-responsive">
             <table className="custom-table">
-              <thead className="border border-0">
-                <tr
-                  style={{
-                    color: "rgba(79, 79, 79, 1)",
-                    fontStyle: "poppins",
-                    fontWeight: "500",
-                  }}
-                >
+              <thead className=" ">
+                <tr style={{}}>
                   <th>Name</th>
                   <th>Unit Number</th>
                   <th>Date</th>
@@ -112,7 +114,6 @@ const FinancialManagement = () => {
                 {residents.map((resident, index) => (
                   <tr
                     style={{
-                      color: "rgba(79, 79, 79, 1)",
                       fontStyle: "poppins",
                       fontWeight: "500",
                     }}
@@ -122,32 +123,140 @@ const FinancialManagement = () => {
                       <img src="src/Images/Profileimg.png" alt="" />{" "}
                       {resident.name}
                     </td>
-                    <td>
-                      <span className="wing">{resident.unitNumber}</span>
+                    <td className="">
+                      <div className="d-flex">
+                        <div>
+                          <p
+                            style={{
+                              textAlign: "center",
+                              borderRadius: "10px",
+                              width: "25px",
+                              backgroundColor: " #eef1fd",
+                            }}
+                            className="text-primary fw-bold"
+                          >
+                            {resident.wing}
+                          </p>
+                        </div>
+                        <div>
+                          <span
+                            style={{
+                              color: "rgba(79, 79, 79, 1) ",
+                              fontStyle: "poppins",
+                              fontWeight: "500",
+                            }}
+                          >
+                            {resident.unitNumber}
+                          </span>
+                        </div>
+                      </div>
                     </td>
-                    <td>{resident.date}</td>
+                    <td className="">{resident.date}</td>
+                    <td className="">
+                      <span
+                        className={`badge ${
+                          resident.Status === "Tenant" ? "tenant" : ""
+                        }  
+${resident.Status === "Owner" ? "owner" : ""}  `}
+                      >
+                        {resident.Status === "Tenant" && (
+                          <img
+                            src="src/Images/user.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        {resident.Status === "Owner" && (
+                          <img
+                            src="src/Images/tag-user.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        <img src="src\Images\buildings-4.png" alt="" />{" "}
+                        {resident.Status}
+                      </span>
+                    </td>
+                    <td>
+                      <p
+                        style={{ color: "rgba(79, 79, 79, 1)" }}
+                        className="mt-1"
+                      >
+                        {resident.PhoneNumber}
+                      </p>
+                    </td>
+                    <td>
+                      <span className="text-success">${resident.Amount}</span>
+                    </td>
+                    <td>
+                      <p
+                        style={{
+                          backgroundColor: "rgba(231, 76, 60, 1)",
+                          color: "white",
+                          width: "50px",
+                          textAlign: "center",
+                          borderRadius: "10px",
+                        }}
+                        className=""
+                      >
+                        {resident.Penalty}{" "}
+                      </p>
+                    </td>
+
+                    <td className="">
+                      <span
+                        className={`badge ${
+                          resident.status === "Pending" ? "pending" : ""
+                        }  
+                      ${resident.status === "Done" ? "done" : ""}  `}
+                      >
+                        {resident.status === "Pending" && (
+                          <img
+                            src="src/Images/timer.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        {resident.status === "Done" && (
+                          <img
+                            src="src/Images/verify.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        <img src="src\Images\buildings-4.png" alt="" />{" "}
+                        {resident.status}
+                      </span>
+                    </td>
                     <td>
                       <span
-                        className={
-                          resident.Status === "Occupied"
-                            ? "badge occupied"
-                            : "badge vacate"
-                        }
+                        className={`badge ${
+                          resident.Payment === "Online" ? "online" : ""
+                        }  
+${resident.Payment === "Cash" ? "cash" : ""}  `}
                       >
-                        <MdPerson /> {resident.Status}
+                        {resident.Payment === "Online" && (
+                          <img
+                            src="src/Images/wallet-2.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        {resident.Payment === "Cash" && (
+                          <img
+                            src="src/Images/moneys.png"
+                            alt="Occupied Building"
+                          />
+                        )}
+                        <img src="src\Images\buildings-4.png" alt="" />{" "}
+                        {resident.Payment}
                       </span>
                     </td>
                     <td>
-                      <span className="font-weight-bold">
-                        {resident.PhoneNumber}
-                      </span>
-                    </td>
-                    <td>{resident.Amount}</td>
-                    <td>{resident.Penalty}</td>
-                    <td>{resident.Status}</td>
-                    <td>{resident.Payment}</td>
-                    <td>
-                      <FaEye style={{ fontSize: "20px" }} />
+                      <button
+                        className="button"
+                        style={{
+                          border: "none",
+                          backgroundColor: "transparent",
+                        }}
+                      >
+                        <img src="src/Images/view.png" alt="" />
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -180,7 +289,11 @@ const FinancialManagement = () => {
           {showAddModal && (
             <>
               <div className=" modal-backdrop show modal-dialog-centered"></div>
-              <div className=" modal d-block  " aria-hidden="true" tabIndex="-1">
+              <div
+                className=" modal d-block  "
+                aria-hidden="true"
+                tabIndex="-1"
+              >
                 <div className="modal-dialog ">
                   <div
                     className="modal-content"
@@ -192,7 +305,9 @@ const FinancialManagement = () => {
                     }}
                   >
                     <div className="">
-                      <h5 className="mt-2 mx-3 modal-title border-bottom">Set Maintanance </h5>
+                      <h5 className="mt-2 mx-3 modal-title border-bottom">
+                        Set Maintanance{" "}
+                      </h5>
                     </div>
                     <div className="modal-body">
                       <form>
@@ -201,8 +316,11 @@ const FinancialManagement = () => {
                             Password<span className="text-danger">*</span>
                           </label>
                           <div className="d-flex ">
-                            <input 
-                            style={{borderRadius:"10px", border:"1px solid rgba(32, 34, 36, 1)"}}
+                            <input
+                              style={{
+                                borderRadius: "10px",
+                                border: "1px solid rgba(32, 34, 36, 1)",
+                              }}
                               type="password"
                               placeholder="********"
                               className="form-control"
@@ -311,15 +429,32 @@ const FinancialManagement = () => {
                               Penalty Applied After Day Selection
                             </label>
                             <div className="dropdown">
-  <button style={{ color:"rgba(167, 167, 167, 1)" }} className="btn  btn col-12 dropdown-toggle text-dark border" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Select Panalty Applied After Day Selection
-  </button>
-  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <Link className="dropdown-item" href="//">4 Days</Link>
-    <Link className="dropdown-item" href="//">5 Days</Link>
-    <Link className="dropdown-item" href="//">6</Link>
-  </div>
-</div>
+                              <button
+                                style={{ color: "rgba(167, 167, 167, 1)" }}
+                                className="btn  btn col-12 dropdown-toggle text-dark border"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                Select Panalty Applied After Day Selection
+                              </button>
+                              <div
+                                className="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton"
+                              >
+                                <Link className="dropdown-item" href="//">
+                                  4 Days
+                                </Link>
+                                <Link className="dropdown-item" href="//">
+                                  5 Days
+                                </Link>
+                                <Link className="dropdown-item" href="//">
+                                  6
+                                </Link>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div className="mt-5 d-flex justify-content-between">
