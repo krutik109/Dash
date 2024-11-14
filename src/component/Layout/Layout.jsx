@@ -19,7 +19,7 @@ const Layout = () => {
       <div className="row">
         {/* Sidebar */}
         <div
-          className={`sidebar ${isSidebarOpen ? 'd-block col-12 col-sm-3 col-xl-2' : 'd-none d-md-block col-md-3 col-lg-3 col-xl-2'
+          className={`sidebar bg-light ${isSidebarOpen ? 'd-block col-12 col-sm-3 col-xl-2' : 'd-none d-md-block col-md-3 col-lg-3 col-xl-2'
             } border sidebar_height`}
         >
           <SideBar toggleSidebar={toggleSidebar} />
@@ -27,7 +27,7 @@ const Layout = () => {
 
         {/* Main content */}
         <div
-          className={`main-content ${isSidebarOpen ? 'col-12 col-sm-9 col-xl-10' : 'col-12 col-md-9 col-lg-9 col-xl-10'
+          className={`main-content bg-light ${isSidebarOpen ? 'col-12 col-sm-9 col-xl-10' : 'col-12 col-md-9 col-lg-9 col-xl-10'
             } sidebar_height`}
         >
           <Header toggleSidebar={toggleSidebar} />

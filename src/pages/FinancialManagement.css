@@ -1,21 +1,25 @@
 
 .badge.cash{
+  width: 100px;
 background-color: rgba(32, 34, 36, 0.05);
 color: rgba(32, 34, 36, 1);
 }
 .badge.online{
+  width: 100px;
   background-color: rgba(86, 120, 233, 0.1);
   color: rgba(86, 120, 233, 1);
 }
 
 .badge.pending {
-
+  width: 100px;
+border-radius: 58px;
   background-color:rgba(255, 195, 19, 0.1); 
   color: rgba(255, 195, 19, 1);
 }
   
 .badge.done {
-
+  width: 100px;
+border-radius: 58px;
   background-color:rgba(57, 151, 61, 0.1); 
   color:rgba(57, 151, 61, 1);
 }
@@ -169,11 +173,6 @@ color: rgba(79, 70, 229, 1); /* Blue */
 }
 
 /* Additional table styles for cleaner look */
-.custom-table thead tr {
-}
-
-.custom-table tbody tr {
-}
 
 /* Remove specific border settings */
 .rmHead th {
@@ -208,8 +207,6 @@ color: rgba(79, 70, 229, 1); /* Blue */
 }
 
 /* Optional: add bottom border styling for table headers and rows */
-.custom-table thead tr {
-}
 
 .custom-table tbody tr {
   border-bottom: 1px solid #e6e6e6;

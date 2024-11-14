@@ -24,7 +24,7 @@ const DashBoard = () => {
   const handleCloseEditModal = () => setShowEditModal(false);
 
   return (
-    <div className="container-fluid resident-management">
+    <div className="container-fluid resident-management p-3"  >
       {/* Top Balance Cards */}
       <div className="row ">
         <div className="col-lg-3 mb-3 ">
@@ -90,7 +90,7 @@ const DashBoard = () => {
               <div className="card border rounded" style={{ height: "330px" }}>
                 <div className="card-header d-flex justify-content-between align-items-center p-2">
                   <h5 style={{ fontSize: "20px" }}>Important Numbers</h5>
-                  <button className="btn btn-primary" onClick={handleShowAddModal}>
+                  <button className="btn mianColor2" onClick={handleShowAddModal}>
                     Add
                   </button>
                 </div>
@@ -165,7 +165,7 @@ const DashBoard = () => {
                           >
                             Cancel
                           </button>
-                          <button type="button" className="btn btn-primary" style={{ width: "45%" }}>
+                          <button type="button" className="btn mianColor2" style={{ width: "45%" }}>
                             Save
                           </button>
                         </div>
@@ -269,7 +269,7 @@ const DashBoard = () => {
                 <tbody>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -295,7 +295,7 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -321,7 +321,7 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -347,7 +347,7 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -496,7 +496,7 @@ const DashBoard = () => {
                     </div>
                     <div className="modal-footer justify-content-between">
                       <button type="button" className="btn btn-secondary" style={{width:"46%"}} onClick={handleCloseEditModal}>Cancel</button>
-                      <button type="button" className="btn btn-primary" style={{width:"46%"}}>Save</button>
+                      <button type="button" className="btn mainColor2" style={{width:"46%"}}>Save</button>
                     </div>
                   </div>
                 </div>

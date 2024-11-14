@@ -30,11 +30,13 @@
  font-weight: 600;
 }
 .radio-option input[type="radio"] {
+  
   accent-color: #F09619;
 }
 
 .agreement-checkbox input[type="checkbox"] {
   accent-color: #F09619;
+  
 }
 
 

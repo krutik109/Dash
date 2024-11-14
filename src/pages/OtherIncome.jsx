@@ -159,7 +159,7 @@ const styles2 = {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4>Other Income</h4>
           {/* Button to open modal */}
-          <button className="btn btn-primary" onClick={handleShowAddModal}>
+          <button className="btn mainColor2" onClick={handleShowAddModal}>
             Create Other Income
           </button>
         </div>

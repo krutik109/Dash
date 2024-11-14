@@ -1,0 +1,98 @@
+/* Action Button Styles */
+.actions {
+    display: flex;
+    /* Space between action buttons */
+  }
+  
+  .btn-action {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-action:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+  }
+  
+  .btn-action img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #Red {
+    accent-color: #fd6208 ;
+  }
+  /* Styling for the row */
+.complainer {
+    display: flex;
+    align-items: center;
+   /* Space between image and text */
+  }
+  
+  .complainer-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Badge Styles */
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center; /* Center text within badge */
+  }
+  .badge2 {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #2b0b0b;
+    text-align: center; /* Center text within badge */
+  }
+  /* Priority Colors */
+  .badge-medium {
+    background-color: #6c83f7; /* Medium - Blue */
+  }
+  
+  .badgebg {
+    background-color: rgba(246, 248, 251, 1) /* Low - Green */
+  }
+  
+  .badge-high {
+    background-color: #f44336; /* High - Red */
+  }
+  
+  /* Status Colors */
+  .status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center; /* Center text within status */
+  }
+  
+  .status.open {
+    background-color: #f0f4ff; /* Light blue background */
+    color: #6c83f7;
+  }
+  
+  .status.pending {
+    background-color: #fff3cd; /* Light yellow background */
+    color: #ff9800;
+  }
+  
+  .status.solve {
+    background-color: #e8f5e9; /* Light green background */
+    color: #4caf50;
+  }
+  

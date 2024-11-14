@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ResidentManagement.css";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaPlus } from "react-icons/fa";
 
 
 const ResidentDetailsTable = () => {
@@ -26,6 +27,52 @@ const ResidentDetailsTable = () => {
       members: "-",
       vehicles: "-",
     },
+    {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: " 1001",
+      unitStatus: "Occupied",
+      residentStatus: "Tenant",
+      phoneNumber: "97587 85828",
+      members: 1,
+      vehicles: 2,
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: " 1001",
+      unitStatus: "Occupied",
+      residentStatus: "Tenant",
+      phoneNumber: "97587 85828",
+      members: 1,
+      vehicles: 2,
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: " 1001",
+      unitStatus: "Occupied",
+      residentStatus: "Tenant",
+      phoneNumber: "97587 85828",
+      members: 1,
+      vehicles: 2,
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: " 1001",
+      unitStatus: "Occupied",
+      residentStatus: "Tenant",
+      phoneNumber: "97587 85828",
+      members: 1,
+      vehicles: 2,
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: " 1001",
+      unitStatus: "Occupied",
+      residentStatus: "Tenant",
+      phoneNumber: "97587 85828",
+      members: 1,
+      vehicles: 2,
+    }
   ]);
 
   const [status, setStatus] = useState("Occupied");
@@ -34,20 +81,21 @@ const ResidentDetailsTable = () => {
   return (
     <div
       className="container-fluid rounded "
-      style={{ backgroundColor: " #f5f5f5 " }}
+      style={{ backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
     >
       <div className=" bg- p-2 ">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4>Resident Tenant and Owner Details</h4>
           {/* Button to open modal */}
-          <Button
-            className=""
+          <button 
+          style={{ width: "294px", height: "49px", fontSize: "16px",fontWeight: "600", borderRadius: "10px", color:"white",fontStyle: "poppins" }}
+            className="btn mainColor2"
             onClick={() => setAgreement(false)}
             data-toggle="modal"
             data-target="#residentModal"
           >
-            Add New Resident Details
-          </Button>
+          <FaPlus/>  Add New Resident Details
+          </button>
         </div>
         {/* <table style={{textTransform:"lowercase"}} className="custom-table   ">
         <thead>
@@ -111,9 +159,10 @@ const ResidentDetailsTable = () => {
             </thead>
             <tbody>
               {residents.map((resident, index) => (
-                <tr className="bg-white" key={index}>
+                <tr className="bg-white " key={index}>
                   <td
                     style={{
+                      
                       color: "rgba(79, 79, 79, 1) ",
                       fontStyle: "poppins",
                       fontWeight: "500",
@@ -340,8 +389,10 @@ const ResidentDetailsTable = () => {
             </div>
             <div className="modal-footer d-flex justify-content-evenly ">
               <button
+              style={{fontweight:"600",fontSize:"18px", width:"165px" ,height:"51px", borderRadius:"10px" }}
+                  
                 type="button"
-                className="btn btn-secondary col-4"
+                className="btn btn-secondary "
                 data-dismiss="modal"
               >
                 Cancel
@@ -350,8 +401,9 @@ const ResidentDetailsTable = () => {
                 {" "}
                 <button
                   type="button"
-                  className="btn btn-primary"
-                  disabled={!agreement}
+                  className="btn mainColor2"
+                  style={{fontSize: "18px",fontweight:"600", width:"165px" ,height:"51px", borderRadius:"10px" }}
+                  
                 >
                   Save changes
                 </button>

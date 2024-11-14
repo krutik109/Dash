@@ -112,12 +112,12 @@ import {
   FaBullhorn,
   FaSignOutAlt,
 } from "react-icons/fa";
-import { width } from "@mui/system";
+
 
 const SideBar = ({ toggleSidebar }) => {
   return (
     <>
-      <div className="row">
+      <div className="row bg-light ">
         {/* Close button for screens up to 767px */}
         <div className="col-12 d-md-none text-end mt-2">
           <button className="btn  text-dark close-btn" onClick={toggleSidebar}>
@@ -135,10 +135,11 @@ const SideBar = ({ toggleSidebar }) => {
 
         <div className=" col-md-12  mt-1 mb-1">
           <NavLink
+            className="navlink"
             to="/"
             style={{
               textDecoration: "none",
-              color: "black",
+             
               height: "52px",
               width: "245px",
               fontStyle: "poppins",
@@ -154,7 +155,7 @@ const SideBar = ({ toggleSidebar }) => {
         </div>
         <div className="sidebarbtn col-md-12 mt-1  mb-1 ">
           <NavLink
-            className=" "
+            className="navlink"
             style={{
               textDecoration: "none",
               color: "black",
@@ -173,6 +174,7 @@ const SideBar = ({ toggleSidebar }) => {
 
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
+          className="navlink"
             to="/FinancialManagement"
             style={{
               textDecoration: "none",
@@ -192,6 +194,7 @@ const SideBar = ({ toggleSidebar }) => {
 
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
+          className="navlink"
             to="/FacilityManagement"
             style={{
               textDecoration: "none",
@@ -210,7 +213,8 @@ const SideBar = ({ toggleSidebar }) => {
 
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
-            to="/"
+          className="navlink"
+            to="/complainttracking"
             style={{
               textDecoration: "none",
               color: "black",
@@ -225,6 +229,7 @@ const SideBar = ({ toggleSidebar }) => {
         </div>
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
+          className="navlink"
             to="/"
             style={{
               textDecoration: "none",
@@ -236,13 +241,24 @@ const SideBar = ({ toggleSidebar }) => {
             onClick={toggleSidebar}
           >
             <p className=" p-2 hovermaincolor">
-            <FaShieldAlt className="" /> Security Management
+            <FaShieldAlt className="" /> <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+    Dropdown link
+  </a>
+
+  <div class="dropdown-menu">
+    <NavLink to={"/visitorlogs"} className="dropdown-item" href="#">Visitor Logs</NavLink>
+    <NavLink to={"/securityprotocol"}  className ="dropdown-item" href="#">Security Protocol</ NavLink>
+   
+  </div>
+</div>
             </p>
           </NavLink>
         </div>
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
-            to="/"
+          className="navlink"
+            to="/securitygaurd"
             style={{
               textDecoration: "none",
               color: "black",
@@ -258,6 +274,7 @@ const SideBar = ({ toggleSidebar }) => {
         </div>
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
+          className="navlink"
             to="/"
             style={{
               textDecoration: "none",
@@ -272,7 +289,12 @@ const SideBar = ({ toggleSidebar }) => {
             <p className=" p-2 hovermaincolor"> <FaBullhorn className="" /> Announcement</p>
           </NavLink>
         </div>
-      </div>
+        <div>
+          <NavLink to=""> 
+            <p className=" p-2 hovermaincolor"> <FaSignOutAlt className="" /> Logout</p>
+          </NavLink>
+        </div>
+      </div> 
     </>
   );
 };

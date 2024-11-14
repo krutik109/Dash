@@ -143,7 +143,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 const Header = ({ toggleSidebar }) => {
   return (
     <>
-      <div className="row d-flex justify-content-between align-items-center mt-3 mb-3">
+      <div className="row  d-flex justify-content-between align-items-center mt-3 mb-3">
         {/* Hamburger icon for small screens */}
         <div className="col-auto d-md-none">
           <button  className="btn text-dark" onClick={toggleSidebar}>

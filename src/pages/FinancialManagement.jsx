@@ -40,6 +40,73 @@ const FinancialManagement = () => {
       Penalty: "250",
       status: "Pending",
       Payment: "Online",
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
+    }, {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
+    },
+    {
+      name: "Evelyn Harper",
+      wing: "A",
+      unitNumber: "1001",
+      date: "2022/01/01",
+      Status: "Tenant",
+      PhoneNumber: "9876549876",
+      Amount: "1000",
+      Penalty: "250",
+      status: "Pending",
+      Payment: "Online",
     },
   ]);
 
@@ -78,8 +145,8 @@ const FinancialManagement = () => {
         </Link>
       </div>
       <div
-        className="container-fluid rounded "
-        style={{ backgroundColor: " #f5f5f5 ", border: "none" }}
+        className="container-fluid  rounded "
+        style={{ backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
       >
         <div className=" p-2 ">
           <div className="d-flex justify-content-between align-items-center mb-4">
@@ -88,6 +155,7 @@ const FinancialManagement = () => {
             <button style={{
               width: "200px",
               height: "50px",
+              fontSize: "16px",
               fontStyle: "poppins",
               fontWeight: "500",
             }} className="btn  mainColor2" onClick={handleShowAddModal}>
@@ -202,9 +270,9 @@ ${resident.Status === "Owner" ? "owner" : ""}  `}
                     </td>
 
                     <td className="">
-                      <span
+                      <span style={{borderRadius: "58px"}}
                         className={`badge ${
-                          resident.status === "Pending" ? "pending" : ""
+                          resident.status === "Pending" ? "pending " : ""
                         }  
                       ${resident.status === "Done" ? "done" : ""}  `}
                       >
@@ -225,7 +293,7 @@ ${resident.Status === "Owner" ? "owner" : ""}  `}
                       </span>
                     </td>
                     <td>
-                      <span
+                      <span style={{borderRadius: "58px"}}
                         className={`badge ${
                           resident.Payment === "Online" ? "online" : ""
                         }  
@@ -461,14 +529,22 @@ ${resident.Payment === "Cash" ? "cash" : ""}  `}
                           <button
                             type="button"
                             className="btn btn-secondary"
-                            style={{ width: "170px" }}
+                            style={{
+                              width: "175px",
+                              fontWeight: "600",
+                              fontSize: "18px",
+                            }}
                             onClick={handleCloseAddmaintananceModal}
                           >
                             Cancel
                           </button>
                           <button
-                            style={{ width: "170px" }}
-                            className="btn btn-primary "
+                            style={{
+                              width: "175px",
+                              fontWeight: "600",
+                              fontSize: "18px",
+                            }}
+                            className="btn mainColor2"
                             onClick={handleCloseAddmaintananceModal}
                           >
                             Apply

@@ -62,8 +62,8 @@ const ResidentForm = () => {
         <div className="container-fluid form-container" style={{ backgroundColor: "#eff4f9" }}>
             <div className="row justify-content-center ">
                 <div className="">
-             <Link to={"/OwnerForm"}>  <button className=" mainColor2 rounded-top border-top-only btn btn-primary">Owner</button></Link> 
-               <Link to="/TenantForm"><button className=" text-dark bg-white rounded-top border-top-only btn">Tenant</button></Link>
+             <Link to={"/OwnerForm"}>  <button style={{width:"135px", height:"49px", borderRadius:"10px", fontSize:"14px", fontWeight:"500"  }} className=" mainColor2 rounded-top border-top-only btn mainColor2">Owner</button></Link> 
+               <Link to="/TenantForm"><button style={{width:"135px", height:"49px", borderRadius:"10px" , fontSize:"14px", fontWeight:"500"}} className=" text-dark bg-white rounded-top border-top-only btn">Tenant</button></Link>
                     <form onSubmit={handleSubmit} className=' border p-4 rounded shadow bg-white'>
                         {/* <h3 className="form-title mb-4">Owner/Tenant Information</h3> */}
 

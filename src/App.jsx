@@ -55,7 +55,11 @@ import Layout from "./component/Layout/Layout";
 import FacilityManagement from "./pages/FacilityManagement";
 import TenantForm from './pages/TenantForm';
 import OtherIncome from './pages/OtherIncome';
-
+import ComplaintTracking from "./pages/ComplaintTracking";
+import SecurityGaurd from "./pages/SecurityGaurd";
+import VisitorLogs from "./pages/VisitorLogs";
+import SecurityIcon from '@mui/icons-material/Security';
+import SecurityProtocol from "./pages/SecurityProtocol";
 const App = () => {
 
   const router = createBrowserRouter([
@@ -94,7 +98,18 @@ const App = () => {
         },
         {
           path:'/otherincome', element:<OtherIncome />  
-        }
+        },
+        {
+          path:'/complainttracking', element:<ComplaintTracking />
+        },{
+          path:'/securitygaurd', element:<SecurityGaurd />
+        },{
+          path:'/visitorlogs', element:<VisitorLogs />
+        },
+          {
+            path: "/securityprotocol",
+            element:<SecurityProtocol />,
+          }
 
       ]
     }
