@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./ResidentManagement.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
+import { Tab, Table } from "react-bootstrap";
 
 
-const ResidentDetailsTable = () => {
+const ResidentManagement = () => {
   const [residents, setResidents] = useState([
     {
       name: "Evelyn Harper",
@@ -83,7 +83,7 @@ const ResidentDetailsTable = () => {
       className="container-fluid rounded "
       style={{ backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
     >
-      <div className=" bg- p-2 ">
+      <div className=" ">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4>Resident Tenant and Owner Details</h4>
           {/* Button to open modal */}
@@ -137,8 +137,9 @@ const ResidentDetailsTable = () => {
           ))}
         </tbody>
       </table> */}
-        <div className="table-responsive rounded">
-          <table className="table  table-hover align-middle ">
+        <div className=" rounded ">
+          <Table className="    table-hover  ">
+
             <thead className="">
               <tr
                 style={{
@@ -157,18 +158,19 @@ const ResidentDetailsTable = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="    ">
               {residents.map((resident, index) => (
-                <tr className="bg-white " key={index}>
-                  <td
+                <tr className="bg-white  " key={index}>
+                  <td className=""
                     style={{
+                      padding: "15px",
                       
                       color: "rgba(79, 79, 79, 1) ",
                       fontStyle: "poppins",
                       fontWeight: "500",
                     }}
                   >
-                    <img src="src\Images\Profileimg.png" alt="" />{" "}
+                    <img src="src\Images\Profileimg.png" alt="" />
                     {resident.name}
                   </td>
                   <td className="">
@@ -297,7 +299,7 @@ const ResidentDetailsTable = () => {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
         </div>
       </div>
       {/* Bootstrap Modal */}
@@ -416,4 +418,4 @@ const ResidentDetailsTable = () => {
   );
 };
 
-export default ResidentDetailsTable;
+export default ResidentManagement;

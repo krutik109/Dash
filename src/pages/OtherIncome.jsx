@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaEllipsisV, FaRegEyeSlash } from "react-icons/fa";
+import { FaClosedCaptioning, FaEllipsisV, FaRegEyeSlash } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -167,45 +168,7 @@ const styles2 = {
       {/* card component 1 */}
       <div className="d-flex gap-3 align-items-center mb-4">
 
-      <div style={styles1.card}>
-        <div style={styles1.header}>
-          <h3 style={styles1.title}>Ganesh Chaturthi</h3>
-          <div style={styles1.menuIcon} onClick={toggleMenu}>
-            <FaEllipsisV />
-          </div>
-          {showMenu && (
-            <div style={styles1.dropdownMenu}>
-              <div style={styles1.dropdownItem}>  <button className="btn  " onClick={handleShowEditModal}>
-            Edit
-          </button></div>
-              <div style={styles1.dropdownItem}> <button className="btn " onClick={handleShowViewModal}>
-            View
-          </button> </div>
-              <div style={styles1.dropdownItem}><button className="btn " onClick={handleShowDeleteModal}>
-            Delete
-          </button></div>
-            </div>
-          )}
-        </div>
-        <div style={styles1.content}>
-          <p>
-            <strong>Amount Per Member:</strong> $100
-          </p>
-          <p>
-            <strong>Total Member:</strong> 50
-          </p>
-          <p>
-            <strong>Date:</strong> 01/07/2024
-          </p>
-          <p>
-            <strong>Due Date:</strong> 10/07/2024
-          </p>
-          <p>
-            <strong>Description:</strong> The celebration of Ganesh Chaturthi
-            involves the installation of clay idols of Ganesha in.
-          </p>
-        </div>
-      </div>
+     
 
       {/* card component 2 */}
       <div style={styles1.card}>
@@ -216,30 +179,36 @@ const styles2 = {
           </div>
           {showMenu && (
             <div style={styles1.dropdownMenu}>
-              <div style={styles1.dropdownItem}>  <button className="btn " onClick={handleShowEditModal}>
+              <div style={styles1.dropdownItem}>  <button  style={{color:"black", fontSize:"16px"}} className=" btn " onClick={handleShowEditModal}>
             Edit
           </button></div>
-              <div style={styles1.dropdownItem}> <button className="btn " onClick={handleShowViewModal}>
+              <div style={styles1.dropdownItem}> <button  style={{color:"black", fontSize:"16px"}}  className="btn " onClick={handleShowViewModal}>
             View
           </button> </div>
-              <div style={styles1.dropdownItem}><button className="btn " onClick={handleShowDeleteModal}>
+              <div style={styles1.dropdownItem}><button  style={{color:"black", fontSize:"16px"}} className="btn " onClick={handleShowDeleteModal}>
             Delete
           </button></div>
             </div>
           )}
         </div>
         <div style={styles1.content}>
-          <p>
-            <strong>Amount Per Member:</strong> $100
+          <p className="d-flex justify-content-between">
+            <strong>Amount Per Member:</strong> <span style={{  backgroundColor: "#eef1fd",
+                          color: "rgba(86, 120, 233, 1)",
+                          width: "60px",
+                          textAlign: "center",
+                          borderRadius: "10px",}}>
+            <b>  ₹ 1000 </b>
+            </  span>
           </p>
-          <p>
-            <strong>Total Member:</strong> 50
+          <p className="d-flex justify-content-between">
+            <strong>Total Member:</strong> <b>50</b>
           </p>
-          <p>
-            <strong>Date:</strong> 01/07/2024
+          <p className="d-flex justify-content-between">
+            <strong>Date:</strong><b> 10/07/2024</b>
           </p>
-          <p>
-            <strong>Due Date:</strong> 10/07/2024
+          <p className="d-flex justify-content-between">
+            <strong>Due Date:</strong> <b>10/07/2024</b>
           </p>
           <p>
             <strong>Description:</strong> The celebration of Ganesh Chaturthi
@@ -388,7 +357,7 @@ const styles2 = {
                 className="modal-content"
                 style={{
                   width: "410px",
-                  height: "468px",
+                  height: "500px",
                   marginTop: "200px",
                   left: "30px",
                 }}
@@ -464,7 +433,7 @@ const styles2 = {
                     <div className="modal-footer d-flex justify-content-between">
                       <button
                         type="button"
-                        className="btn border"
+                        className="btn text-dark border"
                         style={{ width: "165px" }}
                         onClick={handleCloseEditModal}
                       >
@@ -475,7 +444,7 @@ const styles2 = {
                           width: "165px",
                           backgroundColor: "rgba(246, 248, 251, 1)",
                         }}
-                        className="btn border"
+                        className="btn mainColor2 border"
                         onClick={handleCloseEditModal}
                       >
                         <h5 style={{ fontSize: "18px" }}>Save</h5>
@@ -519,7 +488,7 @@ const styles2 = {
                         style={{ width: "165px" }}
                         onClick={handleCloseDeleteModal}
                       >
-                        <h5 style={{ fontSize: "18px" }}>Cancel</h5>
+                        <h5 className="text-dark" style={{ fontSize: "18px" }}>Cancel</h5>
                       </button>
                       <button
                         style={{
@@ -555,9 +524,9 @@ const styles2 = {
               boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
             }}
           >
-            <div className="modal-header">
-              <h5 className="modal-title" style={{ fontWeight: '600' }}>View Maintenance Details</h5>
-              <button type="button" className="btn-close" onClick={handleCloseViewModal} aria-label="Close" />
+            <div className="modal-header ">
+              <h5 className="modal-title " style={{ fontWeight: '600' }}>View Maintenance Details</h5>
+              <button type="button" className="btn-close" onClick={handleCloseViewModal}><FaX/></button>
             </div>
             <div className="modal-body">
               <div style={styles2.userInfo}>

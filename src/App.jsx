@@ -50,7 +50,6 @@ import FinancialManagement from './pages/FinancialManagement';
  import CreateSocietyForm from './component/CreateSocietyForm';
  import ResidentForm from './pages/ResidentForm';
 import DashBoard from './pages/DashBoard';
-import ResidentManagement from './pages/ResidentManagement';
 import Layout from "./component/Layout/Layout";
 import FacilityManagement from "./pages/FacilityManagement";
 import TenantForm from './pages/TenantForm';
@@ -60,6 +59,7 @@ import SecurityGaurd from "./pages/SecurityGaurd";
 import VisitorLogs from "./pages/VisitorLogs";
 import SecurityIcon from '@mui/icons-material/Security';
 import SecurityProtocol from "./pages/SecurityProtocol";
+import ResidentManagement from "./pages/ResidentManagement/ResidentManagement";
 const App = () => {
 
   const router = createBrowserRouter([

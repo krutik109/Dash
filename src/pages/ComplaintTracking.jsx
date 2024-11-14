@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ComplaintTracking.css'
 import { FiX } from "react-icons/fi";
+import { Table } from 'react-bootstrap';
 function ComplaintTracking() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -30,7 +31,7 @@ function ComplaintTracking() {
                 <button className="btn mainColor2  " onClick={handleShowCreateModal} >Create Complaint</button>
               </div>
               <div style={{ overflowX: 'auto', height: '900px' }} className="table-responsive   mt-2">
-                <table className="table  rounded-table">
+                <Table className="tab  rounded-table">
                   <thead>
                     <tr>
                       <th >Complainer Name</th>
@@ -318,7 +319,7 @@ function ComplaintTracking() {
                       </td>
                     </tr>
                   </tbody>
-                </table>
+                </Table>
               </div>
             </div>
             {/* Create Complaint Modal */}

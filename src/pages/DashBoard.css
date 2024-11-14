@@ -99,6 +99,7 @@
   
   .table th, .table td {
     vertical-align: middle;
+    padding: 10px;
   }
   
   .btn-action {
@@ -122,12 +123,7 @@
     max-height: 400px; /* Set a maximum height for the scrollable sections */
     overflow-y: auto; /* Enables vertical scrolling */
   }
-  .rounded-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%; /* Full width table */
-    overflow: hidden;
-  }
+ 
   
   .rounded-table thead {
     background-color: #a3b4ec;

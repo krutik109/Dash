@@ -122,9 +122,71 @@ const FinancialManagement = () => {
   const handleCloseAddmaintananceModal = () =>
     setShowAddMaintananceModal(false);
 
+  const containerStyle = {
+    display: 'flex',
+    gap: '1rem',
+    padding: '1rem',
+    backgroundColor: '#fff',
+  };
+
+  const cardStyle = {
+    width: '236px',
+    height: '105px',
+    borderRadius: '8px',
+    padding: '1rem',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+    fontFamily: 'Arial, sans-serif',
+  };
+
+  const greenCard = {
+    ...cardStyle,
+    borderLeft: '5px solid green',
+  };
+
+  const redCard = {
+    ...cardStyle,
+    borderLeft: '5px solid red',
+  };
+
+  const amountStyle = {
+    fontSize: '24px',
+    fontWeight: 'bold',
+  };
+
+  const greenAmount = { ...amountStyle, color: 'green' };
+  const redAmount = { ...amountStyle, color: 'red' };
+
+ 
+
   return (
     <>
-      <div></div>
+       <div style={containerStyle} className="d-flex justify-content-between">
+        <div className="d-flex">
+
+      <div className="" style={greenCard}>
+        <span >Maintenance Amount</span>
+        <span className="me-5" style={greenAmount}>₹ 0</span>
+      </div>
+      <div style={redCard}>
+        <span>Penalty Amount</span>
+        <span style={redAmount}>₹ 0</span>
+      </div>
+        </div>
+      <button style={{
+              width: "200px",
+              height: "50px",
+              fontSize: "16px",
+              fontStyle: "poppins",
+              fontWeight: "500",
+              borderRadius: "10px",
+            }} className="btn  mainColor2 mt-4" onClick={handleShowAddModal}>
+              Set Maintanance
+            </button>
+    </div>
       <div className="buttons d-flex">
         <Link to={"/financialmanagement"}>
           {" "}
@@ -152,15 +214,7 @@ const FinancialManagement = () => {
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h4>Maintanance Details</h4>
             {/* Button to open modal */}
-            <button style={{
-              width: "200px",
-              height: "50px",
-              fontSize: "16px",
-              fontStyle: "poppins",
-              fontWeight: "500",
-            }} className="btn  mainColor2" onClick={handleShowAddModal}>
-              Set Maintanance
-            </button>
+           
           </div>
           <div className="table-responsive">
             <table className="custom-table">

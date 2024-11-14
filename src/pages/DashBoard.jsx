@@ -252,7 +252,7 @@ const DashBoard = () => {
           <div className="border rounded complaint-list p-3 bg-white">
             <div className="d-flex justify-content-between align-items-center ">
               <h5>Complaint List</h5>
-              <button className="btn border">Month <i className="fas fa-angle-down"></i></button>
+              <button className="btn border text-dark">Month <i className="fas fa-angle-down"></i></button>
             </div>
             <div className="table-responsive mt-2">
               <table className="table rounded-table">
@@ -379,10 +379,10 @@ const DashBoard = () => {
           {/* View Complaint Modal */}
           {showViewModal && (
             <>
-              <div className="modal-backdrop show"></div>
-              <div className="modal d-block" tabIndex="-1">
-                <div className="modal-dialog">
-                  <div className="modal-content" style={{ width: "400px" }}>
+              <div className="modal-backdrop show "></div>
+              <div className="modal d-block " tabIndex="-1">
+                <div className="modal-dialog  ">
+                  <div className="modal-content " style={{ width: "400px", marginTop: "20px" }}>
                     <div className="modal-header">
                       <h5 className="modal-title">View Complaint</h5>
                       <button type="button" className="btn-close" onClick={handleCloseViewModal}><FiX size={24} /> {/* Close Icon */}</button>
@@ -550,7 +550,7 @@ const DashBoard = () => {
           <div className="card upcoming-activity">
             <div className="card-header d-flex justify-content-between align-items-center">
               <h5 style={{ fontSize: "16px" }}>Upcoming Activity</h5>
-              <button className='btn border' style={{ width: "90px", fontSize: "14px" }}>Month <FaAngleDown /></button>
+              <button className='btn border text-dark' style={{ width: "90px", fontSize: "14px" }}>Month <FaAngleDown /></button>
             </div>
             <div className="card-body scrollable-card">
               {/* Sample Upcoming Activity Item */}
@@ -629,7 +629,7 @@ const DashBoard = () => {
               </div>
               <div className="maintenance-item d-flex bd-highlight align-items-center border-bottom" >
                 <div className=" bd-highlight rounded">
-                  <img src="src\Images\Group5.png" alt="activity" style={{ height: "40px", height: "40px" }} />
+                  <img src="src\Images\Group5.png" alt="activity" style={{ height: "40px" }} />
                 </div>
                 <div className="p-2 bd-highlight">
                   <h5 style={{ fontSize: "14px" }}>Society Meeting</h5>
