@@ -123,6 +123,7 @@ const FinancialManagement = () => {
     setShowAddMaintananceModal(false);
 
   const containerStyle = {
+    marginTop: '2rem',
     display: 'flex',
     gap: '1rem',
     padding: '1rem',
@@ -164,6 +165,9 @@ const FinancialManagement = () => {
 
   return (
     <>
+    <div className="container-fluid ">
+
+   
        <div style={containerStyle} className="d-flex justify-content-between">
         <div className="d-flex">
 
@@ -187,19 +191,19 @@ const FinancialManagement = () => {
               Set Maintanance
             </button>
     </div>
-      <div className="buttons d-flex">
+      <div style={{}} className="buttons d-flex mt-4  ">
         <Link to={"/financialmanagement"}>
           {" "}
-          <button className="maintnanancebtn hovermaincolor rounded-top  bg-white  border-bottom border-danger btn ">
-            <span style={{ color: "black", fontSize: "16px" }}>
+          <button  style={{ width: "135px", height: "57px", color: "black", fontSize: "16px",   fontWeight: "500" }} className="btn  hovermaincolor  rounded-top bg-white   border-bottom border-danger  ">
+            <span >
               {" "}
               Maintanance{" "}
             </span>
           </button>
         </Link>
         <Link to="/otherincome">
-          <button className=" otherincomebtn  hovermaincolor rounded-top bg-white  btn  border-bottom border-danger">
-            <span style={{ color: "black", fontSize: "16px" }}>
+          <button style={{ width: "135px", height: "57px", color: "black", fontSize: "16px",   fontWeight: "500" }} className="btn hovermaincolor  rounded-top bg-white  btn border-bottom border-danger   ">
+          <span >
               {" "}
               Other Income{" "}
             </span>
@@ -207,12 +211,12 @@ const FinancialManagement = () => {
         </Link>
       </div>
       <div
-        className="container-fluid  rounded "
+        className="bg-white mt-1 rounded "
         style={{ backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
       >
         <div className=" p-2 ">
-          <div className="d-flex justify-content-between align-items-center mb-4">
-            <h4>Maintanance Details</h4>
+          <div className="d-flex justify-content-between align-items-center ">
+            <h4 className="mt-3">Maintanance Details</h4>
             {/* Button to open modal */}
            
           </div>
@@ -552,7 +556,8 @@ ${resident.Payment === "Cash" ? "cash" : ""}  `}
                             </label>
                             <div className="dropdown">
                               <button
-                                style={{ color: "rgba(167, 167, 167, 1)" }}
+                                style={{
+                                  fontSize:"14px", color: "rgba(167, 167, 167, 1)" }}
                                 className="btn  btn col-12 dropdown-toggle text-dark border"
                                 type="button"
                                 id="dropdownMenuButton"
@@ -563,7 +568,7 @@ ${resident.Payment === "Cash" ? "cash" : ""}  `}
                                 Select Panalty Applied After Day Selection
                               </button>
                               <div
-                                className="dropdown-menu"
+                                className="dropdown-menu end"
                                 aria-labelledby="dropdownMenuButton"
                               >
                                 <Link className="dropdown-item" href="//">
@@ -612,6 +617,7 @@ ${resident.Payment === "Cash" ? "cash" : ""}  `}
             </>
           )}
         </div>
+      </div>
       </div>
     </>
   );

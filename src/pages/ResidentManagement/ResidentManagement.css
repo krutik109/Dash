@@ -8,6 +8,7 @@
   background-color: #fff;
 }
 
+
 .custom-table th, .custom-table td {
   vertical-align: middle;
   color: #333;
@@ -24,19 +25,54 @@
 
 /* radio `accent-color` */
 
-.radio-option{
- font-style: italic;
- font-weight: 600;
-}
-.radio-option input[type="radio"] {
-  
-  accent-color: #F09619;
+/* Style for the radio buttons to make them appear with a custom color and rounded shape */
+.radio-group input[type="radio"] {
+  appearance: none; /* Remove default styles */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f09619; /* Orange border */
+  border-radius: 50%; /* Make it round */
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
 }
 
-.agreement-checkbox input[type="checkbox"] {
-  accent-color: #F09619;
-  
+.radio-group input[type="radio"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f09619; /* Inner orange dot when checked */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+/* Style for the checkbox input with custom color */
+.agreement-checkbox input[type="checkbox"] {
+  appearance: none; /* Remove default styles */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #f09619; /* Orange border */
+  border-radius: 4px; /* Optional: keep it square or make it rounded */
+  margin-right: 8px;
+  position: relative;
+}
+
+.agreement-checkbox input[type="checkbox"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f09619; /* Orange fill when checked */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px; /* Keep it square to look like a check mark */
+}
+
 
 
 
@@ -89,10 +125,7 @@ color: rgba(79, 70, 229, 1); /* Blue */
 }
 
 /* Responsive table styles */
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-}
+
 
 @media (max-width: 768px) {
   .custom-table thead {
@@ -109,7 +142,7 @@ color: rgba(79, 70, 229, 1); /* Blue */
     display: block;
     text-align: right;
     position: relative;
-    padding-left: 50%;
+   
   }
 
   .custom-table tbody td::before {

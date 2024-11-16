@@ -176,22 +176,13 @@ export default function SecurityGaurd() {
         <div className="container-fluid bg-white rounded shadow-sm ">
           <div className="d-flex flex-column flex-md-row justify-content-between align-items-center ">
             <h4 style={{ font: "semibold" }} className="">Security Guard Details</h4>
-            <button style={{fontSize:"14px" ,fontWeight:"600"}} className="btn mt-2 mainColor2 d-flex align-items-center justify-content-center" onClick={() => setShowModal(true)}>
-              <FaPlus
-                style={{
-                  fontSize: "18px",
-                  borderRadius: "5px",
-                  background: "rgba(255, 255, 255, 1)",
-                  color: "#FE512E",
-                  marginRight: "8px",
-                }}
-              />
-              Add Security
+            <button style={{width:"180px",height:"51px",  borderRadius:"8px",fontSize:"14px" ,fontWeight:"600"}} className="btn gap-2 mt-2 mainColor2 d-flex align-items-center justify-content-center" onClick={() => setShowModal(true)}>
+              <img src="src/Images/add-square.png" alt="" /> Add Security
             </button>
           </div>
 
 
-          <div className=" table-responsive " style={{ height: "700px", border: "1px solid #ddd", borderRadius: "8px", marginTop: "20px" }}>
+          <div className=" table-responsive " style={{ height: "750px", border: "1px solid #ddd", borderRadius: "8px", marginTop: "20px" }}>
             <Table  responsive style={{ width: "100%" }}>
               <thead>
                 <tr>
@@ -327,10 +318,10 @@ export default function SecurityGaurd() {
                       </span>
                     </td>
                     <td className='text-center' style={{ verticalAlign: "middle" }}>
-                      <div className="d-flex align-items-center justify-content-center">
-                        <FaEdit className="text-success me-2" style={{ cursor: "pointer" }} onClick={() => handleShowEdit(guard)} />
-                        <FaEye className="text-primary me-2" style={{ cursor: "pointer" }} onClick={() => handleShowView(guard)} />
-                        <FaTrash className="text-danger" style={{ cursor: "pointer" }} onClick={() => handleShowDelete(guard.id)} />
+                      <div className="d-flex align-items-center gap-2 justify-content-center">
+                        <FaEdit className="text-success me-2" style={{ cursor: "pointer", fontSize: "18px" }} onClick={() => handleShowEdit(guard)} />
+                        <FaEye className="text-primary me-2" style={{ cursor: "pointer" , fontSize: "18px" }} onClick={() => handleShowView(guard)} />
+                        <FaTrash className="text-danger" style={{ cursor: "pointer" , fontSize: "18px" }} onClick={() => handleShowDelete(guard.id)} />
                       </div>
                     </td>
                   </tr>
@@ -338,6 +329,7 @@ export default function SecurityGaurd() {
               </tbody>
             </Table>
 
+{/* View Modal */}
             <Modal show={showViewGuard} onHide={handleClose} centered>
               <Modal.Header closeButton>
                 <Modal.Title style={{
@@ -347,6 +339,24 @@ export default function SecurityGaurd() {
                   alignItems: "center",
                   gap: "10px",
                 }}>View Security Protocols</Modal.Title>
+{/* Close button */}
+
+<button
+    type="button"
+    className="btn"
+    onClick={handleClose}
+    style={{
+      color: "#000",
+      backgroundColor: "transparent",
+      fontSize: "1.5rem",
+      border: "none",
+      cursor: "pointer",
+    }}
+    aria-label="Close"
+  >
+    &times; {/* Close icon (x) */}
+  </button>
+
               </Modal.Header>
               <Modal.Body>
                 <div style={{
@@ -490,6 +500,8 @@ export default function SecurityGaurd() {
             </Modal>
 
 
+{/* Delete Modal */}
+
             <Modal show={showDeleteGuard} onHide={handleClose} centered>
               <Modal.Header closeButton>
                 <Modal.Title>Delete Protocol?</Modal.Title>
@@ -498,10 +510,10 @@ export default function SecurityGaurd() {
                 <p>Are you sure you want to delete this protocol?</p>
               </Modal.Body>
               <Modal.Footer style={{ display: "flex", justifyContent: "space-between" }}>
-                <button className='btn ' variant="secondary" onClick={handleClose} style={{ width: "175px", height: "51px", border: "1px solid #202224", padding: "10px 55px 10px 55px", background: "#FFFFFF",  fontStyle: "Poppins",fontWeight: "500", fontSize: "16px",  color: "#202224"}}>
+                <button className='btn ' variant="secondary" onClick={handleClose} style={{ borderRadius: "10px", width: "175px", height: "51px", border: "1px solid #202224", padding: "10px 55px 10px 55px", background: "#FFFFFF",  fontStyle: "Poppins",fontWeight: "500", fontSize: "16px",  color: "#202224"}}>
                   Cancel
                 </button>
-                <button className='btn mainColor2' onClick={handleDelete} style={{
+                <button className='btn mainColor2' onClick={handleDelete} style={{ borderRadius: "10px",
                  fontStyle: "Poppins",fontWeight: "500", fontSize: "16px", width: "175px", height: "51px", border: "1px", padding: "10px 55px 10px 55px", color: "#FFFFFF"
                 }}>
                   Delete
@@ -513,7 +525,29 @@ export default function SecurityGaurd() {
             {/* Add Security Modal */}
             <Modal show={showModal} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>{isEdit ? 'Edit Security' : 'Add Security'}</Modal.Title>
+          <Modal.Title >{isEdit ? 'Edit Security' : 'Add Security'}
+          <button
+    type="button"
+    className="btn"
+    onClick={handleClose}
+    style={{
+      color: "#000",
+      backgroundColor: "transparent",
+      fontSize: "1.5rem",
+      border: "none",
+      cursor: "pointer",
+      marginLeft: "260px",
+      bottom: "10px",
+    }}
+    aria-label="Close"
+  >
+    &times; {/* Close icon (x) */}
+  </button>
+
+          </Modal.Title>
+          
+
+          
         </Modal.Header>
         <Modal.Body>
           {/* Add Photo Section */}

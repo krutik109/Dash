@@ -224,7 +224,10 @@ color: rgba(79, 70, 229, 1); /* Blue */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: none; /* Remove border from the table */
 }
+.maintnanancebtn{
+  border: 2px solid black;
 
+}
 .custom-table th,
 .custom-table td {
   padding: 12px;

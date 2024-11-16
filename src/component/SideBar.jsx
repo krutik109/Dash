@@ -230,7 +230,7 @@ const SideBar = ({ toggleSidebar }) => {
         <div className="col-md-12 mt-1 mb-1">
           <NavLink
           className="navlink"
-            to="/"
+            to="/visitorlogs"
             style={{
               textDecoration: "none",
               color: "black",
@@ -241,12 +241,13 @@ const SideBar = ({ toggleSidebar }) => {
             onClick={toggleSidebar}
           >
             <p className=" p-2 hovermaincolor">
-            <FaShieldAlt className="" /> <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-    Dropdown link
+            <FaShieldAlt className="" /> Security Management   <a className="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+    
   </a>
+  <div style={{position:"absolute", top:"px", left:"-200px"}} className="dropdown ">
+ 
 
-  <div class="dropdown-menu">
+  <div className="dropdown-menu ">
     <NavLink to={"/visitorlogs"} className="dropdown-item" href="#">Visitor Logs</NavLink>
     <NavLink to={"/securityprotocol"}  className ="dropdown-item" href="#">Security Protocol</ NavLink>
    
@@ -255,7 +256,7 @@ const SideBar = ({ toggleSidebar }) => {
             </p>
           </NavLink>
         </div>
-        <div className="col-md-12 mt-1 mb-1">
+        <div className="col-md-12 mt-5 mb-1">
           <NavLink
           className="navlink"
             to="/securitygaurd"

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./ResidentManagement.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { FaPlus } from "react-icons/fa";
 import { Tab, Table } from "react-bootstrap";
-
 
 const ResidentManagement = () => {
   const [residents, setResidents] = useState([
@@ -36,7 +35,8 @@ const ResidentManagement = () => {
       phoneNumber: "97587 85828",
       members: 1,
       vehicles: 2,
-    }, {
+    },
+    {
       name: "Evelyn Harper",
       wing: "A",
       unitNumber: " 1001",
@@ -45,7 +45,8 @@ const ResidentManagement = () => {
       phoneNumber: "97587 85828",
       members: 1,
       vehicles: 2,
-    }, {
+    },
+    {
       name: "Evelyn Harper",
       wing: "A",
       unitNumber: " 1001",
@@ -54,7 +55,8 @@ const ResidentManagement = () => {
       phoneNumber: "97587 85828",
       members: 1,
       vehicles: 2,
-    }, {
+    },
+    {
       name: "Evelyn Harper",
       wing: "A",
       unitNumber: " 1001",
@@ -63,7 +65,8 @@ const ResidentManagement = () => {
       phoneNumber: "97587 85828",
       members: 1,
       vehicles: 2,
-    }, {
+    },
+    {
       name: "Evelyn Harper",
       wing: "A",
       unitNumber: " 1001",
@@ -72,29 +75,45 @@ const ResidentManagement = () => {
       phoneNumber: "97587 85828",
       members: 1,
       vehicles: 2,
-    }
+    },
   ]);
 
+
+  const [showAddResidentModal, setShowAddResidentModal] = useState(false);
+const handleShowAddResidentModal = () => setShowAddResidentModal(true);
+const handleCloseAddResidentModal = () => setShowAddResidentModal(false);
+  const navigate = useNavigate();
+  const handleSaveChanges = () => {
+    navigate("/addresidents");
+  };
   const [status, setStatus] = useState("Occupied");
   const [agreement, setAgreement] = useState(false);
 
   return (
     <div
       className="container-fluid rounded "
-      style={{ backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
+      style={{ height: "100vh", backgroundColor: " rgba(240, 245, 251, 1) ", border: "none" }}
     >
       <div className=" ">
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h4>Resident Tenant and Owner Details</h4>
           {/* Button to open modal */}
-          <button 
-          style={{ width: "294px", height: "49px", fontSize: "16px",fontWeight: "600", borderRadius: "10px", color:"white",fontStyle: "poppins" }}
-            className="btn mainColor2"
-            onClick={() => setAgreement(false)}
+          <button
+            style={{
+              width: "294px",
+              height: "49px",
+              fontSize: "16px",
+              fontWeight: "600",
+              borderRadius: "10px",
+              color: "white",
+              fontStyle: "poppins",
+            }}
+            className="btn mainColor2 mt-3"
+            onClick={handleShowAddResidentModal}
             data-toggle="modal"
-            data-target="#residentModal"
+           
           >
-          <FaPlus/>  Add New Resident Details
+            <FaPlus /> Add New Resident Details
           </button>
         </div>
         {/* <table style={{textTransform:"lowercase"}} className="custom-table   ">
@@ -137,9 +156,8 @@ const ResidentManagement = () => {
           ))}
         </tbody>
       </table> */}
-        <div className=" rounded ">
-          <Table className="    table-hover  ">
-
+        <div className="  ">
+          <Table className="  table  ">
             <thead className="">
               <tr
                 style={{
@@ -158,13 +176,13 @@ const ResidentManagement = () => {
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody className="    ">
+            <tbody  className="">
               {residents.map((resident, index) => (
-                <tr className="bg-white  " key={index}>
-                  <td className=""
+                <tr className=" " key={index}>
+                  <td
+                    className=""
                     style={{
-                      padding: "15px",
-                      
+                      padding:"0.9rem",
                       color: "rgba(79, 79, 79, 1) ",
                       fontStyle: "poppins",
                       fontWeight: "500",
@@ -204,7 +222,6 @@ const ResidentManagement = () => {
                   </td>
                   <td className="">
                     <span
-                     
                       className={`badge ${
                         resident.unitStatus === "Occupied" ? "occupied" : " "
                       }  ${resident.unitStatus === "Vacate" ? "vacate " : ""}`}
@@ -223,17 +240,12 @@ const ResidentManagement = () => {
                   </td>
                   <td className="">
                     <span
-
                       className={`badge ${
                         resident.residentStatus === "Tenant" ? "tenant" : ""
                       }  
-                      ${
-                        resident.residentStatus === "Owner" ? "owner" : ""
-                      }  `}
+                      ${resident.residentStatus === "Owner" ? "owner" : ""}  `}
                     >
-
-
-{resident.residentStatus === "Tenant" && (
+                      {resident.residentStatus === "Tenant" && (
                         <img
                           src="src/Images/user.png"
                           alt="Occupied Building"
@@ -303,117 +315,178 @@ const ResidentManagement = () => {
         </div>
       </div>
       {/* Bootstrap Modal */}
+   {showAddResidentModal && (
+    <>
       <div
-        className="modal "
-        id="residentModal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="residentModalTitle"
-        aria-hidden="true"
-        data-backdrop="false"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        className="modal-backdrop show"
+      
+       
       >
-        <div
-          className="modal-dialog modal-dialog-centered"
-          style={{ maxWidth: "380px" }}
-          role="document"
-        >
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="residentModalTitle">
-                Residence Status
-              </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true ">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <form>
-                <div className="radio-group d-flex justify-content-evenly gap-2">
-                  <button
-                    style={{ border: "2px solid rgba(240, 150, 25, 1)" }}
-                    className={`col-4 rounded ${
-                      status === "Occupied" ? "selected" : ""
-                    }`}
-                    onClick={() => setStatus("Occupied")}
-                  >
-                    <label className="radio-option">
-                      <input
-                        type="radio"
-                        name="status"
-                        value="Occupied"
-                        checked={status === "Occupied"}
-                        onChange={(e) => setStatus(e.target.value)}
-                      />
-                      <span className="">Occupied</span>
-                    </label>
-                  </button>
-
-                  <button
-                    style={{ border: "2px solid rgba(240, 150, 25, 1)" }}
-                    className={`col-4 rounded ${
-                      status === "Vacate" ? "selected" : ""
-                    }`}
-                    onClick={() => setStatus("Vacate")}
-                  >
-                    <label className="radio-option">
-                      <input
-                        type="radio"
-                        name="status"
-                        value="Vacate"
-                        checked={status === "Vacate"}
-                        onChange={(e) => setStatus(e.target.value)}
-                      />
-                      <span>Vacate</span>
-                    </label>
-                  </button>
-                </div>
-
-                <div className="agreement-section">
-                  <label className="agreement-checkbox">
-                    <input
-                      type="checkbox"
-                      checked={agreement}
-                      onChange={(e) => setAgreement(e.target.checked)}
-                    />
-                    <span className="">
-                      {" "}
-                      By submitting, you agree to select {status}
-                    </span>
-                  </label>
-                </div>
-              </form>
-            </div>
-            <div className="modal-footer d-flex justify-content-evenly ">
-              <button
-              style={{fontweight:"600",fontSize:"18px", width:"165px" ,height:"51px", borderRadius:"10px" }}
-                  
-                type="button"
-                className="btn btn-secondary "
-                data-dismiss="modal"
-              >
-                Cancel
-              </button>
-              <Link to={"/addresidents"}>
-                {" "}
-                <button
-                  type="button"
-                  className="btn mainColor2"
-                  style={{fontSize: "18px",fontweight:"600", width:"165px" ,height:"51px", borderRadius:"10px" }}
-                  
-                >
-                  Save changes
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <div
+  className="modal-backdrop d-flex align-items-center justify-content-center"
+  id="residentModal"
+  style={{
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+  }}
+>
+  <div
+    className="modal-content p-3"
+    style={{
+      maxWidth: "380px",
+      width: "100%",
+      borderRadius: "12px",
+      backgroundColor: "#fff",
+    }}
+  >
+    <div className="modal-header border-0">
+      <h5 className="modal-title mx-2 mb-4" id="residentModalTitle">
+        Residence Status
+      </h5>
+      <button
+        type="button"
+        className="close"
+        aria-label="Close"
+        onClick={() => setShowAddResidentModal(false)}
+        style={{
+          border: "none",
+          background: "none",
+          fontSize: "24px",
+          cursor: "pointer",
+        }}
+      >
+        &times;
+      </button>
+    </div>
+    <div className="modal-body">
+      <form>
+        <div className="radio-group d-flex justify-content-evenly gap-2 mb-3">
+          <button
+          
+            style={{
+              width: "176px",
+              height: "41px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: `2px solid ${
+                status === "Occupied" ? "#F09619" : "#ddd"
+              }`,
+              borderRadius: "8px",
+              fontWeight: "600",
+              backgroundColor: status === "Occupied" ? "#FDF3E7" : "#fff",
+              color: "#000",
+            }}
+            className={status === "Occupied" ? "selected" : ""}
+            onClick={(e) => {
+              e.preventDefault();
+              setStatus("Occupied");
+            }}
+          >
+            <input
+              type="radio"
+              name="status"
+              value="Occupied"
+              checked={status === "Occupied"}
+              onChange={(e) => setStatus(e.target.value)}
+            />
+            <span>Occupied</span>
+          </button>
+
+          <button
+            style={{
+              width: "176px",
+              height: "41px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: `2px solid ${
+                status === "Vacate" ? "#F09619" : "#ddd"
+              }`,
+              borderRadius: "8px",
+              fontWeight: "600",
+              backgroundColor: status === "Vacate" ? "#FDF3E7" : "#fff",
+            }}
+            className={status === "Vacate" ? "selected" : ""}
+            onClick={(e) => {
+              e.preventDefault();
+              setStatus("Vacate");
+            }}
+          >
+            <input
+              type="radio"
+              name="status"
+              value="Vacate"
+              checked={status === "Vacate"}
+              onChange={(e) => setStatus(e.target.value)}
+            />
+            <span>Vacate</span>
+          </button>
+        </div>
+
+        <div className="agreement-section d-flex align-items-center mb-3">
+          <input
+            type="checkbox"
+            checked={agreement}
+            onChange={(e) => setAgreement(e.target.checked)}
+            style={{
+              accentColor: "#F09619",
+              marginRight: "8px",
+              width: "18px",
+              height: "18px",
+            }}
+          />
+          <span style={{ fontWeight: "500", color: "#555" }}>
+            By submitting, you agree to select {status}
+          </span>
+        </div>
+      </form>
+    </div>
+    <div className="modal-footer d-flex justify-content-evenly border-0">
+      <button
+        onClick={() => setShowAddResidentModal(false)}
+        style={{
+          fontWeight: "600",
+          fontSize: "18px",
+          width: "165px",
+          height: "51px",
+          borderRadius: "10px",
+          border: "2px solid #ddd",
+          backgroundColor: "#fff",
+          color: "#000",
+        }}
+        type="button"
+      >
+        Cancel
+      </button>
+      <button className="mainColor2"
+        type="button"
+        style={{
+          fontSize: "18px",
+          fontWeight: "600",
+          width: "165px",
+          height: "51px",
+          borderRadius: "10px",
+          backgroundColor: "linear-gradient(to right, #f96c3a, #f39c12)",
+          color: "#fff",
+          border: "none",
+        }}
+        onClick={handleSaveChanges}
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+
+        </> 
+)}
     </div>
   );
 };

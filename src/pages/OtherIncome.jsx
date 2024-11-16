@@ -137,10 +137,10 @@ const styles2 = {
     },
   };
   return (
-    <div>
+    <div className="container-fluid ">
       <Link to={"/financialManagement"}>
         {" "}
-        <button className=" hovermaincolor rounded-top border-bottom border-danger btn btn">
+        <button  style={{ width: "135px", height: "57px", color: "black", fontSize: "16px",   fontWeight: "500"  }} className="btn mt-2 hovermaincolor bg-white rounded-top border-bottom border-danger  ">
           <span style={{ color: "black", fontSize: "16px" }}>
             {" "}
             Maintanance{" "}
@@ -148,7 +148,7 @@ const styles2 = {
         </button>
       </Link>
       <Link to="/otherincome">
-        <button className=" hovermaincolor rounded-top  btn  border-bottom border-danger">
+        <button style={{ width: "135px", height: "57px", color: "black", fontSize: "16px",   fontWeight: "500"  }} className="mt-2 hovermaincolor rounded-top  btn  border-bottom border-danger bg-white">
           <span style={{ color: "black", fontSize: "16px" }}>
             {" "}
             Other Income{" "}
@@ -156,15 +156,15 @@ const styles2 = {
         </button>
       </Link>
 
-      <div>
-        <div className="d-flex justify-content-between align-items-center mb-4">
+      <div style={{height:"70vh"}}  className="container-fluid bg-white p-4">
+        <div className="d-flex justify-content-between align-items-center mb-4 ">
           <h4>Other Income</h4>
           {/* Button to open modal */}
-          <button className="btn mainColor2" onClick={handleShowAddModal}>
+          <button style={{width:"210px", height:"51px", fontWeight:"500", fontSize:"18px", fontStyle:"poppins"}} className="btn mainColor2" onClick={handleShowAddModal}>
             Create Other Income
           </button>
         </div>
-      </div>
+     
       {/* card component 1 */}
       <div className="d-flex gap-3 align-items-center mb-4">
 
@@ -220,7 +220,7 @@ const styles2 = {
 
       
       </div>
-
+      </div>
 
 
       {/* Add Modal */}
@@ -240,6 +240,7 @@ const styles2 = {
               >
                 <div className="modal-header">
                   <h5 className="modal-title">Create Other Income</h5>
+                  <button type="button" style={{ color: "black" }}  className="btn-close " onClick={handleCloseAddModal}></button>
                 </div>
                 <div className="modal-body">
                   <form action=""     >
@@ -326,17 +327,17 @@ const styles2 = {
                         style={{ width: "165px" }}
                         onClick={handleCloseAddModal}
                       >
-                        <h5 style={{ fontSize: "18px" }}>Cancel</h5>
+                        <h5 className="mt-1" style={{ fontSize: "18px", color: "black" }}>Cancel</h5>
                       </button>
                       <button
                         style={{
                           width: "165px",
                           backgroundColor: "rgba(246, 248, 251, 1)",
                         }}
-                        className="btn border"
+                        className="btn border mainColor2 " 
                         onClick={handleCloseAddModal}
                       >
-                        <h5 style={{ fontSize: "18px" }}>Save</h5>
+                        <h5 className="mt-1" style={{ fontSize: "18px" }}>Save</h5>
                       </button>
                     </div>
                   </form>

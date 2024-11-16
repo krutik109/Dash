@@ -57,7 +57,6 @@ import OtherIncome from './pages/OtherIncome';
 import ComplaintTracking from "./pages/ComplaintTracking";
 import SecurityGaurd from "./pages/SecurityGaurd";
 import VisitorLogs from "./pages/VisitorLogs";
-import SecurityIcon from '@mui/icons-material/Security';
 import SecurityProtocol from "./pages/SecurityProtocol";
 import ResidentManagement from "./pages/ResidentManagement/ResidentManagement";
 const App = () => {

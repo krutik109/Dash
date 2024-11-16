@@ -4,15 +4,19 @@ import BalanceChart from './BalanceChart';
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa";
 import { FiX } from 'react-icons/fi';
-const DashBoard = () => {
+const ResidentManagement = () => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showDeleteModal1, setShowDeleteModal1] = useState(false);
   const [showViewModal, setShowViewModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
 
 
   const handleShowAddModal = () => setShowAddModal(true);
   const handleCloseAddModal = () => setShowAddModal(false);
+
+  const handleShowDeleteModal1 = () => setShowDeleteModal1(true);
+  const handleCloseDeleteModal1 = () => setShowDeleteModal1(false);
 
   const handleShowDeleteModal = () => setShowDeleteModal(true);
   const handleCloseDeleteModal = () => setShowDeleteModal(false);
@@ -24,7 +28,7 @@ const DashBoard = () => {
   const handleCloseEditModal = () => setShowEditModal(false);
 
   return (
-    <div className="container-fluid resident-management p-3"  >
+    <div className="container-fluid resident-management">
       {/* Top Balance Cards */}
       <div className="row ">
         <div className="col-lg-3 mb-3 ">
@@ -87,10 +91,10 @@ const DashBoard = () => {
           <div className="row">
             {/* Important Numbers */}
             <div className="col-lg-6">
-              <div className="card border rounded" style={{ height: "330px" }}>
+              <div className="card border rounded" style={{ height: "420px" }}>
                 <div className="card-header d-flex justify-content-between align-items-center p-2">
                   <h5 style={{ fontSize: "20px" }}>Important Numbers</h5>
-                  <button className="btn mianColor2" onClick={handleShowAddModal}>
+                  <button className="btn mainColor2" onClick={handleShowAddModal}>
                     Add
                   </button>
                 </div>
@@ -119,7 +123,7 @@ const DashBoard = () => {
                             tabIndex="0"
                             src="src/Images/delet.png"
                             alt="delete"
-                            onClick={handleShowDeleteModal}
+                            onClick={handleShowDeleteModal1}
                           />
                           <img className="edit-number" role="button" tabIndex="0" src="src/Images/edit.png" alt="edit" />
                         </div>
@@ -135,7 +139,7 @@ const DashBoard = () => {
                   <div className="modal-backdrop show"></div>
                   <div className="modal d-block" tabIndex="-1">
                     <div className="modal-dialog">
-                      <div className="modal-content" style={{ width: "400px", height: "420px" }}>
+                      <div className="modal-content" style={{ width: "400px", height: "420px", marginTop:"250px" }}>
                         <div className="modal-header">
                           <h5 className="modal-title">Add Number</h5>
                           <button type="button" className="btn-close" onClick={handleCloseAddModal}></button>
@@ -165,7 +169,7 @@ const DashBoard = () => {
                           >
                             Cancel
                           </button>
-                          <button type="button" className="btn mianColor2" style={{ width: "45%" }}>
+                          <button type="button" className="btn mainColor2" style={{ width: "45%" }}>
                             Save
                           </button>
                         </div>
@@ -176,15 +180,15 @@ const DashBoard = () => {
               )}
 
               {/* Delete Confirmation Modal */}
-              {showDeleteModal && (
+              {showDeleteModal1 && (
                 <>
                   <div className="modal-backdrop show"></div>
                   <div className="modal d-block" tabIndex="-1">
                     <div className="modal-dialog">
-                      <div className="modal-content" style={{ width: "400px" }}>
+                      <div className="modal-content" style={{ width: "400px", marginTop:"200px" }}>
                         <div className="modal-header">
                           <h5 className="modal-title">Delete Number?</h5>
-                          <button type="button" className="btn-close" onClick={handleCloseDeleteModal}></button>
+                          <button type="button" className="btn-close" onClick={handleCloseDeleteModal1}></button>
                         </div>
                         <div className="modal-body">
                           <p>Are you sure you want to delete this number?</p>
@@ -194,7 +198,7 @@ const DashBoard = () => {
                             type="button"
                             className="btn btn-outline-secondary"
                             style={{ width: "45%" }}
-                            onClick={handleCloseDeleteModal}
+                            onClick={handleCloseDeleteModal1}
                           >
                             Cancel
                           </button>
@@ -204,7 +208,7 @@ const DashBoard = () => {
                             style={{ width: "45%" }}
                             onClick={() => {
                               // Add your delete logic here
-                              handleCloseDeleteModal();
+                              handleCloseDeleteModal1();
                             }}
                           >
                             Delete
@@ -218,7 +222,7 @@ const DashBoard = () => {
             </div>
             {/* Pending Maintenances */}
             <div className="col-lg-6">
-              <div className="card pending-maintenance" style={{ height: "330px" }}>
+              <div className="card pending-maintenance" style={{ height: "420px" }}>
                 <div className="card-header d-flex justify-content-between align-items-center">
                   <h5 style={{ fontSize: "17px" }}>Pending Maintenances</h5>
                   <span className='text-primary'>View all</span>
@@ -269,7 +273,7 @@ const DashBoard = () => {
                 <tbody>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -295,7 +299,7 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -321,7 +325,7 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -347,7 +351,59 @@ const DashBoard = () => {
                   </tr>
                   <tr>
                     <td className="complainer">
-                      <img src="src/Images/profileimg.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      Evelyn Harper
+                    </td>
+                    <td>Unethical Behavior</td>
+                    <td>01/02/2024</td>
+                    <td><span className="badge badge-medium">Medium</span></td>
+                    <td><span className="status open">Open</span></td>
+                    <td className="actions ">
+                      <button className="btn-action mb-2">
+                        <img
+                          className="edit-Complaint"
+                          src="src/Images/edit.png"
+                          alt="Edit"
+                          onClick={handleShowEditModal}
+                        />
+                      </button>
+                      <button className="btn-action">
+                        <img src="src/Images/view.png" alt="View" onClick={handleShowViewModal} />
+                      </button>
+                      <button className="btn-action">
+                        <img src="src/Images/delet.png" alt="Delete" onClick={handleShowDeleteModal} />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="complainer">
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
+                      Evelyn Harper
+                    </td>
+                    <td>Unethical Behavior</td>
+                    <td>01/02/2024</td>
+                    <td><span className="badge badge-medium">Medium</span></td>
+                    <td><span className="status open">Open</span></td>
+                    <td className="actions ">
+                      <button className="btn-action mb-2">
+                        <img
+                          className="edit-Complaint"
+                          src="src/Images/edit.png"
+                          alt="Edit"
+                          onClick={handleShowEditModal}
+                        />
+                      </button>
+                      <button className="btn-action">
+                        <img src="src/Images/view.png" alt="View" onClick={handleShowViewModal} />
+                      </button>
+                      <button className="btn-action">
+                        <img src="src/Images/delet.png" alt="Delete" onClick={handleShowDeleteModal} />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="complainer">
+                      <img src="src/Images/image.png" alt="Complainer" className="complainer-image mb-2 me-2" />
                       Evelyn Harper
                     </td>
                     <td>Unethical Behavior</td>
@@ -379,10 +435,10 @@ const DashBoard = () => {
           {/* View Complaint Modal */}
           {showViewModal && (
             <>
-              <div className="modal-backdrop show "></div>
-              <div className="modal d-block " tabIndex="-1">
-                <div className="modal-dialog  ">
-                  <div className="modal-content " style={{ width: "400px", marginTop: "20px" }}>
+              <div className="modal-backdrop show"></div>
+              <div className="modal d-block" tabIndex="-1">
+                <div className="modal-dialog">
+                  <div className="modal-content" style={{ width: "400px", marginTop:"200px" }}>
                     <div className="modal-header">
                       <h5 className="modal-title">View Complaint</h5>
                       <button type="button" className="btn-close" onClick={handleCloseViewModal}><FiX size={24} /> {/* Close Icon */}</button>
@@ -496,7 +552,7 @@ const DashBoard = () => {
                     </div>
                     <div className="modal-footer justify-content-between">
                       <button type="button" className="btn btn-secondary" style={{width:"46%"}} onClick={handleCloseEditModal}>Cancel</button>
-                      <button type="button" className="btn mainColor2" style={{width:"46%"}}>Save</button>
+                      <button type="button" className="btn btn-primary" style={{width:"46%"}}>Save</button>
                     </div>
                   </div>
                 </div>
@@ -509,7 +565,7 @@ const DashBoard = () => {
               <div className="modal-backdrop show"></div>
               <div className="modal d-block" tabIndex="-1">
                 <div className="modal-dialog" >
-                  <div className="modal-content" >
+                  <div className="modal-content" style={{marginTop:"250px"}} >
                     <div className="modal-header">
                       <h5 className="modal-title">Delete Complain?</h5>
                       <button type="button" className="btn-close" onClick={handleCloseDeleteModal}></button>
@@ -629,7 +685,7 @@ const DashBoard = () => {
               </div>
               <div className="maintenance-item d-flex bd-highlight align-items-center border-bottom" >
                 <div className=" bd-highlight rounded">
-                  <img src="src\Images\Group5.png" alt="activity" style={{ height: "40px" }} />
+                  <img src="src\Images\Group5.png" alt="activity" style={{ height: "40px", height: "40px" }} />
                 </div>
                 <div className="p-2 bd-highlight">
                   <h5 style={{ fontSize: "14px" }}>Society Meeting</h5>
@@ -647,4 +703,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default ResidentManagement;

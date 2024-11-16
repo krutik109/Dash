@@ -3,7 +3,7 @@ import './FormUI.css'; // Custom CSS file for detailed styling
 import { FaAngleUp } from "react-icons/fa";
 import VehicleForm from './VehicleForm';
 import { Link } from 'react-router-dom';
-
+import "./ResidentForm.css";
 const ResidentForm = () => {
     const [formData, setFormData] = useState({
         fullName: '',
@@ -107,7 +107,7 @@ const ResidentForm = () => {
                                         />
                                     </div>
                                     <div className="col-md-3">
-                                        <label>Gender<span className='text-danger'>*</span></label>
+                                        <label style={{}}>Gender<span className='text-danger'>*</span></label>
                                         <select
                                             className="form-control"
                                             name="gender"
@@ -115,7 +115,7 @@ const ResidentForm = () => {
                                             onChange={handleInputChange}
                                             required
                                         >
-                                            <option value="Male">Male</option>
+                                            <option type value="Male">Male</option>
                                             <option value="Female">Female</option>
                                             <option value="Other">Other</option>
                                         </select>

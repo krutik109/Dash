@@ -25,10 +25,10 @@ function ComplaintTracking() {
       <div style={{}} className="container-fluid">
         <div className="row">
           <div className="col-12" >
-            <div className="border rounded complaint-list p-3 mt-3 mb-3 bg-white"style={{ height: '600px' }}>
+            <div className="border rounded complaint-list p-3 mt-3 mb-3 bg-white"style={{ height: '800px' }}>
               <div className="d-flex justify-content-between align-items-center mb-3 text-dark">
                 <h2 style={{ fontSize: "20px" }}>Create Complaint</h2>
-                <button className="btn mainColor2  " onClick={handleShowCreateModal} >Create Complaint</button>
+                <button className="btn mainColor2  " style={{ width: "193px", height: "51px", borderRadius: "10px", fontSize: "18px", fontWeight: "500" }}onClick={handleShowCreateModal} >Create Complaint</button>
               </div>
               <div style={{ overflowX: 'auto', height: '900px' }} className="table-responsive   mt-2">
                 <Table className="tab  rounded-table">
@@ -357,35 +357,36 @@ function ComplaintTracking() {
                               <input type="text" className="form-control" id="unit" defaultValue="1001" required />
                             </div>
                           </div>
-                          <div className="my-1">
                             <label className="form-label">Priority*</label>
-                            <div className="d-flex gap-2d-flex justify-content-evenly">
-                              <div className="form-check border p-2 rounded  ">
-                                <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
+                          <div className="my-1 me-1 ">
+
+                            <div className="d-flex gap-2 d-flex justify-content-evenly">
+                              <div className="form-check border p-2 rounded col-4  ">
+                                <input className='' type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">High</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Medium</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Low</label>
                               </div>
                             </div>
                           </div>
-                          <div className="">
                             <label className="form-label">Status*</label>
-                            <div className="d-flex gap-2d-flex justify-content-evenly">
-                              <div className="form-check border p-2 rounded  ">
+                          <div className="my-1 me-1">
+                            <div className="d-flex gap-2 d-flex justify-content-evenly">
+                              <div className="form-check border p-2 rounded col-4 ">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Open</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Pending</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4 ">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Solve</label>
                               </div>
@@ -409,7 +410,7 @@ function ComplaintTracking() {
                 <div className="modal-backdrop show"></div>
                 <div className="modal d-block" tabIndex="-1">
                   <div className="modal-dialog">
-                    <div className="modal-content" style={{ width: '400px' }}>
+                    <div className="modal-content" style={{ width: '400px', marginTop: '250px' }}>
                       <div className="modal-header">
                         <h5 className="modal-title">View Complaint</h5>
                         <button type="button" className="btn-close" onClick={handleCloseViewModal} > <FiX /></button>
@@ -440,8 +441,8 @@ function ComplaintTracking() {
                         <div className="d-flex justify-content-between">
                           <span className="badge bg-light text-dark px-3 py-1">Wing A</span>
                           <span className="badge bg-light text-dark px-3 py-1">Unit 1002</span>
-                          <span className="badge bg-primary text-white px-3 py-1">Medium</span>
-                          <span className="badge bg-info text-dark px-3 py-1">Open</span>
+                          <span style={{backgroundColor:"rgba(86, 120, 233, 1)"}} className="badge  text-white px-3 py-1">Medium</span>
+                          <span style={{backgroundColor:"rgba(239, 242, 253, 1)", color:"rgba(86, 120, 233, 1)"}} className="badge  px-3 py-1">Open</span>
                         </div>
                       </div>
                     </div>
@@ -485,35 +486,36 @@ function ComplaintTracking() {
                               <input type="text" className="form-control" id="unit" defaultValue="1001" required />
                             </div>
                           </div>
-                          <div className="my-1">
-                            <label className="form-label">Priority*</label>
-                            <div className="d-flex gap-2d-flex justify-content-evenly">
-                              <div className="form-check border p-2 rounded  ">
-                                <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
+                          <label className="form-label">Priority*</label>
+                          <div className="my-1 me-1 ">
+
+                            <div className="d-flex gap-2 d-flex justify-content-evenly">
+                              <div className="form-check border p-2 rounded col-4  ">
+                                <input className='' type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">High</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Medium</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Low</label>
                               </div>
                             </div>
                           </div>
-                          <div className="">
                             <label className="form-label">Status*</label>
-                            <div className="d-flex gap-2d-flex justify-content-evenly">
-                              <div className="form-check border p-2 rounded  ">
+                          <div className="my-1 me-1">
+                            <div className="d-flex gap-2 d-flex justify-content-evenly">
+                              <div className="form-check border p-2 rounded col-4 ">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Open</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Pending</label>
                               </div>
-                              <div className="form-check  border p-2 rounded ">
+                              <div className="form-check  border p-2 rounded col-4 ">
                                 <input type="radio" id="Red" name="colors" defaultValue="Red" value="High" />
                                 <label className='ms-1' htmlFor="Red">Solve</label>
                               </div>
@@ -522,8 +524,8 @@ function ComplaintTracking() {
                         </form>
                       </div>
                       <div className="modal-footer justify-content-between">
-                        <button type="button" className="btn btn-secondary" style={{ width: "46%" }} onClick={handleCloseEditModal}>Cancel</button>
-                        <button type="button" className="btn btn-primary" style={{ width: "46%" }}>Save</button>
+                        <button type="button" className="btn btn-secondary"style={{ width: "175px", borderRadius: "10px", fontSize: "18px", fontWeight: "500", height: "51px" }} onClick={handleCloseEditModal}>Cancel</button>
+                        <button type="button" className="btn mainColor2"  style={{ width: "175px", height: "51px", borderRadius: "10px", fontSize: "18px", fontWeight: "500" }}>Save</button>
                       </div>
                     </div>
                   </div>
@@ -536,7 +538,7 @@ function ComplaintTracking() {
                 <div className="modal-backdrop show"></div>
                 <div className="modal d-block" tabIndex="-1">
                   <div className="modal-dialog" >
-                    <div className="modal-content" >
+                    <div style={{marginTop:"250px"}} className="modal-content " >
                       <div className="modal-header">
                         <h5 className="modal-title">Delete Complain?</h5>
                         <button type="button" className="btn-close" onClick={handleCloseDeleteModal}></button>
@@ -547,16 +549,16 @@ function ComplaintTracking() {
                       <div className="modal-footer d-flex justify-content-between">
                         <button
                           type="button"
-                          className="btn btn-outline-secondary"
-                          style={{ width: "45%" }}
+                          className="btn text-black border bg-white"
+                          style={{ width: "175px", borderRadius: "10px", fontSize: "18px", fontWeight: "500", height: "51px" }}
                           onClick={handleCloseDeleteModal}
                         >
                           Cancel
                         </button>
                         <button
                           type="button"
-                          className="btn btn-danger"
-                          style={{ width: "45%" }}
+                          className="btn mainColor2"
+                          style={{ width: "175px", borderRadius: "10px", fontSize: "18px", fontWeight: "500", height: "51px" }}
                           onClick={() => {
                             // Add your delete logic here
                             handleCloseDeleteModal();

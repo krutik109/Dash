@@ -77,7 +77,7 @@ const FacilityManagement = () => {
     };
 
     return (
-        <div className="container-fluid pt-3 mt-3 financial-management">
+        <div style={{height: "100vh"}} className="container-fluid  pt-3 mt-3 financial-management">
             <div className="d-flex justify-content-between align-items-center mb-3 text-dark">
                 <h2 style={{ fontSize: "20px" }}>Facility Management</h2>
                 <button style={{ fontSize: "18px", width: "168px", borderRadius: "10px", height: "51px", fontWeight: "500" }} className="btn mainColor2" onClick={handleShowModal}>Create Facility</button>

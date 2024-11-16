@@ -57,26 +57,42 @@ const  SecurityProtocol = () => {
   };
 
   return (
-    <Container fluid style={{ marginTop: "20px" }}>
+    <Container fluid style={{ height: "100vh", marginTop: "20px" }}>
       <Row className="py-4">
         <Col className="d-flex justify-content-between align-items-center">
           <h2>Security Protocol</h2>
-          <button style={{height:"40px",width:"175px"  ,fontStyle:"poppins",fontWeight:"500",fontSize:"16px",lineHeight:"24px",color:"white"   }} className="btn  mainColor2" onClick={() => handleShow("create")}>
+          <button style={{height:"50px",width:"175px"  ,fontStyle:"poppins",fontWeight:"500",fontSize:"16px",lineHeight:"24px",color:"white",  borderRadius:"10px"  }} className="btn  mainColor2" onClick={() => handleShow("create")}>
             Create Protocols
           </button>
         </Col>
       </Row>
 
-      <Modal show={showModal} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>
-            {modalType === "view"
-              ? "View Protocol"
-              : modalType === "edit"
-              ? "Edit Protocol"
-              : "Create Protocol"}
-          </Modal.Title>
-        </Modal.Header>
+      <Modal show={showModal} className="" onHide={handleClose} centered>
+      <Modal.Header style={{ borderBottom: "none" }}>
+  <Modal.Title className="text-dark">
+    {modalType === "view"
+      ? "View Protocol"
+      : modalType === "edit"
+      ? "Edit Protocol"
+      : "Create Protocol"}
+  </Modal.Title>
+  <button
+    type="button"
+    className="btn"
+    onClick={handleClose}
+    style={{
+      color: "#000",
+      backgroundColor: "transparent",
+      fontSize: "1.5rem",
+      border: "none",
+      cursor: "pointer",
+    }}
+    aria-label="Close"
+  >
+    &times; {/* Close icon (x) */}
+  </button>
+</Modal.Header>
+
         <Modal.Body>
   {modalType === "view" ? (
     selectedProtocol && (
@@ -138,16 +154,16 @@ const  SecurityProtocol = () => {
 </Modal.Body>
 
         {modalType !== "view" && (
-          <Modal.Footer>
-            <div className="d-flex justify-content-evenly p-0 ">
+          <Modal.Footer className="d-flex justify-content-center">
+            <div className="d-flex gap-5 ">
 
 
-            <button onClick={handleClose} className="btn btn1 text-black border"  style={{fontweight:"600",fontSize:"18px",  width:"165px" ,height:"51px", borderRadius:"10px" }}>
+            <button onClick={handleClose} className="btn  text-black border"  style={{fontweight:"600",fontSize:"18px",  width:"165px" ,height:"51px", borderRadius:"10px" }}>
               Cancel
             </button>
 
 
-            <button  onClick={handleSave} className=" btn btn1 mainColor2"  style={{fontSize: "18px",fontweight:"600", width:"165px" ,height:"51px", borderRadius:"10px" }}>
+            <button  onClick={handleSave} className=" btn  mainColor2"  style={{fontSize: "18px",fontweight:"600", width:"165px" ,height:"51px", borderRadius:"10px" }}>
               <span>Save</span>
             </button>
 
@@ -190,10 +206,10 @@ const  SecurityProtocol = () => {
                       </div>
                     </td>
                 <td className="text-center">
-                  <div className="d-flex align-items-center justify-content-center">
-                    <FaEye className="text-primary me-2" style={{ cursor: "pointer" }} onClick={() => handleShow("view", protocol)} />
-                    <FaEdit className="text-success me-2" style={{ cursor: "pointer" }} onClick={() => handleShow("edit", protocol)} />
-                    <FaTrash className="text-danger" style={{ cursor: "pointer" }} onClick={() => handleDelete(protocol.id)} />
+                  <div className="d-flex gap-3 align-items-center justify-content-center">
+                    <FaEdit className="text-success me-2" style={{ cursor: "pointer" , fontSize: "18px" }} onClick={() => handleShow("edit", protocol)} />
+                    <FaEye className="text-primary  me-2" style={{ cursor: "pointer", fontSize: "18px" }} onClick={() => handleShow("view", protocol)} />
+                    <FaTrash className="text-danger" style={{ cursor: "pointer" , fontSize: "18px" }} onClick={() => handleDelete(protocol.id)} />
                   </div>
                 </td>
               </tr>

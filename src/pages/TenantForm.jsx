@@ -63,22 +63,22 @@ const TenantForm = () => {
     return (
         <div className="container-fluid form-container" style={{ backgroundColor: "#eff4f9" }}>
             <div className="row justify-content-center ">
-                <div className="">
+                <div className=" " style={{ width: "100%" }}>
                 <Link to="/ownerForm"><button  style={{width:"135px", height:"49px", borderRadius:"10px" , fontSize:"14px", fontWeight:"500"}} className="rounded-top text-dark bg-white border-top-only btn">Owner</button></Link>
                <Link to="/TenantForm"><button style={{width:"135px", height:"49px", borderRadius:"10px" , fontSize:"14px", fontWeight:"500"}} className="mainColor2 rounded-top border-top-only btn">Tenant</button></Link>
 
-               <div className="row mb-3">
+               <div  style={{width:"1520px", marginLeft:"2px"}} className="row mb-3 bg-white rounded shadow p-4">
                                     <div className="col-md-4">
                                         <label>Owner Full Name<span className='text-danger'>*</span></label>
-                                        <input type="text" className="form-control" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
+                                        <input type="text" className="form-control" name="fullName" placeholder='Enter Full Name' value={formData.fullName} onChange={handleInputChange} required />
                                     </div>
                                     <div className="col-md-4">
                                         <label>Owner Phone No<span className='text-danger'>*</span></label>
-                                        <input type="tel" className="form-control" name="phoneNo" value={formData.phoneNo} onChange={handleInputChange} required />
+                                        <input type="tel" className="form-control" name="phoneNo" placeholder='Enter Phone No' value={formData.phoneNo} onChange={handleInputChange} required />
                                     </div>
                                     <div className="col-md-4">
                                         <label>Owner Address<span className='text-danger'>*</span></label>
-                                        <input type="text" className="form-control" name="email" value={formData.email} onChange={handleInputChange} required />
+                                        <input type="text" className="form-control" name="email" placeholder='Enter Address' value={formData.email} onChange={handleInputChange} required />
                                     </div>
                                 </div>
 
@@ -100,22 +100,22 @@ const TenantForm = () => {
                                 <div className="row mb-3">
                                     <div className="col-md-4">
                                         <label>Full Name<span className='text-danger'>*</span></label>
-                                        <input type="text" className="form-control" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
+                                        <input type="text" placeholder='Enter Full Name' className="form-control" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
                                     </div>
                                     <div className="col-md-4">
                                         <label>Phone No<span className='text-danger'>*</span></label>
-                                        <input type="tel" className="form-control" name="phoneNo" value={formData.phoneNo} onChange={handleInputChange} required />
+                                        <input type="tel" placeholder='Enter Phone No' className="form-control" name="phoneNo" value={formData.phoneNo} onChange={handleInputChange} required />
                                     </div>
                                     <div className="col-md-4">
                                         <label>Email Address<span className='text-danger'>*</span></label>
-                                        <input type="email" className="form-control" name="email" value={formData.email} onChange={handleInputChange} required />
+                                        <input type="email" placeholder='Enter Email Address' className="form-control" name="email" value={formData.email} onChange={handleInputChange} required />
                                     </div>
                                 </div>
 
                                 <div className="row mb-5">
                                     <div className="col-md-3">
                                         <label>Age<span className='text-danger'>*</span></label>
-                                        <input
+                                        <input placeholder='Enter Age'
                                             type="number"
                                             className="form-control pe-3 margin-right-5px"
                                             name="age"
@@ -141,6 +141,7 @@ const TenantForm = () => {
                                     <div className="col-md-2">
                                         <label>Wing<span className='text-danger'>*</span></label>
                                         <input
+                                            placeholder='Enter Wing'
                                             type="text"
                                             className="form-control margin-right-5px"
                                             name="wing"
@@ -152,6 +153,7 @@ const TenantForm = () => {
                                     <div className="col-md-2">
                                         <label>Unit<span className='text-danger'>*</span></label>
                                         <input
+                                            placeholder='Enter Unit'
                                             type="text"
                                             className=" margin-right-5px form-control"
                                             name="unit"
@@ -163,6 +165,7 @@ const TenantForm = () => {
                                     <div className="col-md-2">
                                         <label>Relation<span className='text-danger'>*</span></label>
                                         <input
+                                            placeholder='Enter Relation'
                                             type="text"
                                             className="form-control margin-right-5px"
                                             name="relation"
@@ -224,7 +227,7 @@ const TenantForm = () => {
                     <div className="col-md-3 mx-auto">
                                 <div className=" border border-2 rounded mx-auto d-flex flex-wrap align-items-center p-2">
                                     <img src="src\Images\image2.png" style={{width:"30px"}} alt="" className=" me-2 mt-3" />
-                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2 text-secondary' />
+                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2 ms-3 ' />
                                     <span className='ms-5 text-secondary mb-3' style={{marginTop:"-20px", fontSize:"12px"}}>3.5 MB</span>
                                   
                                 </div>
@@ -234,8 +237,20 @@ const TenantForm = () => {
 
                             <div className="col-md-3 mx-auto">
                                 <div className=" border border-2 rounded mx-auto d-flex flex-wrap align-items-center p-2">
-                                    <img src="src\Images\image2.png" style={{width:"30px"}} alt="" className=" me-2 mt-3" />
-                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2'/>
+                                  <span>  <img src="src\Images\image2.png" style={{width:"30px"}} alt="" className=" me-2 mt-3" /></span>
+                                    <h6 className='img-font mt-1'>Syncfusion Essential Adharcard JPG</h6>
+                                    <span role='button'><RiDeleteBin5Fill className='mb-2 ms-3 '/></span>
+
+                                    <span className='ms-5  text-secondary mb-3' style={{marginTop:"-20px", fontSize:"12px"}}>3.5 MB</span>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+
+                            <div className="col-md-3 mx-auto">
+                                <div className=" border border-2 rounded mx-auto d-flex flex-wrap align-items-center p-2">
+                                    <img src="src\Images\image2.png" alt="" style={{width:"30px"}} className=" me-2 mt-3" />
+                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2 ms-3'/>
 
                                     <span className='ms-5 text-secondary mb-3' style={{marginTop:"-20px", fontSize:"12px"}}>3.5 MB</span>
                                 </div>
@@ -246,18 +261,7 @@ const TenantForm = () => {
                             <div className="col-md-3 mx-auto">
                                 <div className=" border border-2 rounded mx-auto d-flex flex-wrap align-items-center p-2">
                                     <img src="src\Images\image2.png" alt="" style={{width:"30px"}} className=" me-2 mt-3" />
-                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2'/>
-
-                                    <span className='ms-5 text-secondary mb-3' style={{marginTop:"-20px", fontSize:"12px"}}>3.5 MB</span>
-                                </div>
-                                <div>
-                                </div>
-                            </div>
-
-                            <div className="col-md-3 mx-auto">
-                                <div className=" border border-2 rounded mx-auto d-flex flex-wrap align-items-center p-2">
-                                    <img src="src\Images\image2.png" alt="" style={{width:"30px"}} className=" me-2 mt-3" />
-                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2 text-secondary' />
+                                    <h6 className='img-font'>Syncfusion Essential Adharcard JPG</h6><RiDeleteBin5Fill className='mb-2 ms-3' />
                                     <span className='ms-5 text-secondary mb-3' style={{marginTop:"-20px", fontSize:"12px"}}>3.5 MB</span>
                                    
                                 </div>
