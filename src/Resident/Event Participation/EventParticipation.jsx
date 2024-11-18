@@ -64,9 +64,9 @@ const EventParticipation = () => {
 
   return (
     <div className='container-fluid'>
-      <div className='row justify-content-center' >
+      <div className=' row justify-content-center' >
 <div>
-  <div className='d-flex justify-content-start mt-3'>
+  <div className='d-flex justify-content-start mt-3 '>
     
 <Link to={"/eventparticipation"}>  <button className="participatebtn hovermaincolor rounded-top bg-white text-dark btn border-bottom  border-danger">
   <span className='participatebtnspan'>Events Participate</span></button></Link> 

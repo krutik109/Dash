@@ -21,6 +21,7 @@ import Rm from "./pages/Rm";
 import FinancialExpense from "./pages/FinancialExpenses";
 import EventParticipation from "./Resident/Event Participation/EventParticipation";
 import ActivityParticipates from "./Resident/Activity Participate/ActivityParticipates";
+import SecurityProtocols from "./Resident/Security Protocols/SecurityProtocols";
 const App = () => {
 
   const router = createBrowserRouter([
@@ -85,6 +86,9 @@ const App = () => {
           },{
             path: "/activityparticipate",
             element:<ActivityParticipates/>
+          },{
+            path: "/securityprotocols",
+            element:<SecurityProtocols/>
           }
 
       ]

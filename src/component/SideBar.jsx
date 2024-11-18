@@ -61,6 +61,27 @@ const SideBar = ({ toggleSidebar }) => {
 
 </div>
 
+<div className=" col-md-12  mt-1 mb-1">
+
+<NavLink
+            className="navlink"
+            to="/securityprotocols"
+            style={{
+              textDecoration: "none",
+              color: "black",
+              height: "52px",
+              width: "245px",fontStyle: "poppins",
+              fontWeight: "500",
+            }}
+            onClick={toggleSidebar}
+          >
+            {/* Close sidebar on link click in small screens */}
+            <p className=" p-2 hovermaincolor">
+              <FaTh className="" /> Security Protocols
+            </p>
+          </NavLink>
+
+</div>
 
 
         <h3>Admin*</h3>
