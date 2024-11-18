@@ -1,46 +1,4 @@
-// import { Route, Routes } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import './App.css';
-// import SideBar from './component/SideBar';
-// import Header from './component/Header';
-// import DashBoard from './pages/DashBoard';
-
-// import ResidentForm from './pages/ResidentForm';
-// import TenantForm from './pages/TenantForm';
-// import OtherIncome from './pages/OtherIncome';
-// import RegistrationForm from './component/RegistrationForm';
-
-// function App() {
-//   return (
-//     <div className="d-flex"> {/* Flexbox container to position sidebar and content side by side */}
-//       {/* Main content area */}
-//       <div className="content-area" style={{ marginLeft: '290px', padding: '20px', width: '100%', backgroundColor: '#f5f5f5'}}> 
-//       <SideBar />
-//     <Header />
-//         <Routes>
-//           {/* Your route components */}
-
-
-          
-//           <Route path='/' element={<RegistrationForm />} />
-       
-//           <Route path='/tenantform' element={<TenantForm />} />
-//           <Route path='/ownerform' element={<ResidentForm />} />
-        
-//           <Route path='/createSociety' element={<CreateSocietyForm />} />
-//           <Route path='/residentmanagement' element={<ResidentManagement />} />
-//           <Route path='/addresidents' element={<ResidentForm />} />
-//           <Route path='/financialmanagement' element={<FinancialManagement />} />
-//           <Route path='/dashboard' element={<DashBoard />} />
-//           <Route path='/otherincome' element={<OtherIncome />} />
-//         </Routes>
-//       </div>
-//     </div>
-//   );
-// }  
-
-// export default App;
 
 
 import "./App.css"
@@ -61,6 +19,8 @@ import SecurityProtocol from "./pages/SecurityProtocol";
 import ResidentManagement from "./pages/ResidentManagement/ResidentManagement";
 import Rm from "./pages/Rm";
 import FinancialExpense from "./pages/FinancialExpenses";
+import EventParticipation from "./Resident/Event Participation/EventParticipation";
+import ActivityParticipates from "./Resident/Activity Participate/ActivityParticipates";
 const App = () => {
 
   const router = createBrowserRouter([
@@ -119,6 +79,12 @@ const App = () => {
           {
             path: "/financialexpenses",
             element:<FinancialExpense />,
+          },{
+            path: "/eventparticipation",
+            element:<EventParticipation/>,
+          },{
+            path: "/activityparticipate",
+            element:<ActivityParticipates/>
           }
 
       ]

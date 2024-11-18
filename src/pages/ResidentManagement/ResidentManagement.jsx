@@ -9,6 +9,8 @@ import {
   FaEye,
   FaEdit,
   FaPlusSquare,
+  FaTrash,
+  FaXRay,
 } from "react-icons/fa"; // Using react-icons as placeholders
 import { FaX } from "react-icons/fa6";
 import { FiArrowLeft } from "react-icons/fi";
@@ -43,6 +45,9 @@ export default function Rm() {
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const handleOpenDeleteModal = () => setShowDeleteModal(true);
+  const handleCloseDeleteModal = () => setShowDeleteModal(false);
 
   
   const [showVacateModal, setShowVacateModal] = useState(false);
@@ -246,7 +251,7 @@ export default function Rm() {
 
                   {/* Action */}
                   <div className="col-1 text-center">
-                    <div className="d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center justify-content-evenly">
                       <FaEdit
                         className="text-success me-2"
                         style={{ cursor: "pointer", fontSize: "20px" }}
@@ -257,6 +262,11 @@ export default function Rm() {
                         className="text-primary me-2"
                         style={{ cursor: "pointer", fontSize: "20px" }}
                         />
+
+                        </button>
+                        <button onClick={handleOpenDeleteModal} className="border-0 bg-transparent">
+                          
+                        <FaTrash className="text-danger" style={{ cursor: "pointer", fontSize: "20px" }} />
                         </button>
                     </div>
                   </div>
@@ -273,15 +283,15 @@ export default function Rm() {
               <Modal.Header>
                 <Modal.Title>Residence Status</Modal.Title>
               </Modal.Header>
-              <Modal.Body>
-                <div className="residence-status-modal">
+              <Modal.Body className="">
+               
                   <Form>
                     <div
-                      className="radio-group d-flex mb-3"
-                      style={{ gap: "70px" }}
+                      className="radio-group d-flex justify-content-between"
+                      style={{ gap: "12px" }}
                     >
                       <Form.Check
-                        className="formcheck border"
+                        className="formcheck border "
                         type="radio"
                         label="Occupied"
                         name="residenceStatus"
@@ -310,7 +320,7 @@ export default function Rm() {
                       />
                     </Form.Group>
                   </Form>
-                </div>
+              
               </Modal.Body>
               <Modal.Footer className="d-flex justify-content-between">
                 <button
@@ -535,7 +545,41 @@ export default function Rm() {
       </Modal.Body>
     </Modal>
 
-            {/* view Modal */}
+          {/* Delete Modal */}
+          <Modal
+              className="Round-modal"
+              show={showDeleteModal}
+              onHide={handleCloseDeleteModal}
+              centered
+            >
+              <Modal.Header> 
+                <Modal.Title>
+                  <p>Do you want to delate?</p>  
+                </Modal.Title>
+                <FaX onClick={handleCloseDeleteModal} style={{fontSize:"20px"}} className="text-muted "/>{/* Use Bootstrap Icons */}
+               
+              </Modal.Header>
+              <Modal.Body>
+                <p>Are you sure you want to delate  details?</p>
+              </Modal.Body>
+              <Modal.Footer className="d-flex justify-content-between">
+                <button
+                  className="cancelbtn"
+                  variant="secondary"
+                  onClick={handleCloseDeleteModal}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="confirmbtn"
+                  variant="secondary"
+                  onClick={handleCloseDeleteModal}
+                >
+                  Confirm
+                </button>
+              </Modal.Footer>
+            </Modal>
+
           
           </div>
         </div>
