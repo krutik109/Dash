@@ -111,6 +111,7 @@ import {
   FaShieldAlt,
   FaBullhorn,
   FaSignOutAlt,
+  FaBell,
 } from "react-icons/fa";
 
 
@@ -291,8 +292,18 @@ const SideBar = ({ toggleSidebar }) => {
           </NavLink>
         </div>
         <div>
+          <NavLink to="/rm"> 
+            <p className=" p-2 hovermaincolor"> <FaBell className="" /> RM</p>
+          </NavLink>
+        </div>
+        <div>
           <NavLink to=""> 
             <p className=" p-2 hovermaincolor"> <FaSignOutAlt className="" /> Logout</p>
+          </NavLink>
+        </div>
+        <div>
+          <NavLink to="/financialexpenses"> 
+            <p className=" p-2 hovermaincolor"> <FaSignOutAlt className="" /> Fiancial ecpenses</p>
           </NavLink>
         </div>
       </div> 

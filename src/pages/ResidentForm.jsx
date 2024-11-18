@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './FormUI.css'; // Custom CSS file for detailed styling
 import { FaAngleUp } from "react-icons/fa";
 import VehicleForm from './VehicleForm';
@@ -58,6 +58,13 @@ const ResidentForm = () => {
     setVehicleData([...vehicleData, { type: 'Two Wheelers', name: '', number: '' }]);
     setVehicleCount(vehicleCount);
   };
+
+  const handleFileUploadClick = (field) => {
+    if (fileInputRefs.current[field]) {
+        fileInputRefs.current[field].click();
+    }
+};
+const fileInputRefs = useRef    ({});
     return (
         <div className="container-fluid form-container" style={{ backgroundColor: "#eff4f9" }}>
             <div className="row justify-content-center ">
@@ -71,8 +78,17 @@ const ResidentForm = () => {
                         <div className="row">
                             {/* Left Side Image inside the form */}
                             <div className="col-lg-2 d-flex flex-column align-items-center">
-                                <div className="image">
+                                <div className="image"  onClick={() => handleFileUploadClick(name)}>
                                     <img src="src\Images\Frame.png" className="img-thumbnail rounded-circle" alt="Profile" />
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        ref={(ref) => {
+                                            if (ref) fileInputRefs.current[name] = ref;
+                                        }}
+                                        style={{ display: 'none' }}
+                                        onChange={(e) => handleFileChange(name, e.target.files[0])}
+                                    />
                                     <h5 className="text-primary mt-2 ms-3">Add Photo</h5>
                                 </div>
                             </div>
@@ -158,46 +174,31 @@ const ResidentForm = () => {
                         </div>
                         {/* Additional Documents Section */}
                         <div className="row mb-3 mx-auto">
-                            <div className="col-md-3 mx-auto">
-                                <label className='ms-3'>Upload Aadhar Card (Front Side)</label>
-                                <div className="upload  mx-auto text-center">
-                                    <img src="src\Images\image1.png" alt="" className="upload-image" />
-                                    <h6 className="text-primary mt-2">
-                                        Upload a file <span className="text-dark">or drag and drop</span>
-                                    </h6>
-                                    <span className="file-info">PNG, JPG, GIF up to 10MB</span>
+                            {[
+                                { label: 'Upload AadharCard (Front Side)', name: 'aadharFront' },
+                                { label: ' Upload AadharCard (Back Side)', name: 'aadharBack' },
+                                { label: 'Address Proof (Vera Bill OR Light Bill)', name: 'addressProof' },
+                                { label: 'Rent Agreement', name: 'rentAgreement' },
+                            ].map(({ label, name }) => (
+                                <div className="col-md-3" key={name}>
+                                    <label>{label}</label>
+                                    <div className="upload mx-auto text-center" onClick={() => handleFileUploadClick(name)}>
+                                        <img src="src/Images/image1.png" alt="" className="upload-image" />
+                                        <h6 className="text-primary mt-2">
+                                            Upload a file <span className="text-dark">or drag and drop</span>
+                                        </h6>
+                                    </div>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        ref={(ref) => {
+                                            if (ref) fileInputRefs.current[name] = ref;
+                                        }}
+                                        style={{ display: 'none' }}
+                                        onChange={(e) => handleFileChange(name, e.target.files[0])}
+                                    />
                                 </div>
-                            </div>
-                            <div className="col-md-3 mx-auto">
-                                <label className='ms-3'>Upload Aadhar Card (Back Side)</label>
-                                <div className="upload  mx-auto text-center">
-                                    <img src="src\Images\image1.png" alt="" className="upload-image" />
-                                    <h6 className="text-primary mt-2">
-                                        Upload a file <span className="text-dark">or drag and drop</span>
-                                    </h6>
-                                    <span className="file-info">PNG, JPG, GIF up to 10MB</span>
-                                </div>
-                            </div>
-                            <div className="col-md-3 mx-auto">
-                                <label >Address Proof (vera Bill or  LightBill)</label>
-                                <div className="upload  mx-auto text-center">
-                                    <img src="src\Images\image1.png" alt="" className="upload-image" />
-                                    <h6 className="text-primary mt-2 ">
-                                        Upload a file <span className="text-dark">or drag and drop</span>
-                                    </h6>
-                                    <span className="file-info">PNG, JPG, GIF up to 10MB</span>
-                                </div>
-                            </div>
-                            <div className="col-md-3 mx-auto">
-                                <label className='ms-3'>Rent Agreement*(Front Side)</label>
-                                <div className="upload  mx-auto text-center">
-                                    <img src="src\Images\image1.png" alt="" className="upload-image" />
-                                    <h6 className="text-primary mt-2">
-                                        Upload a file <span className="text-dark">or drag and drop</span>
-                                    </h6>
-                                    <span className="file-info">PNG, JPG, GIF up to 10MB</span>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                         <div className="row mb-3">
 

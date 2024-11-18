@@ -59,6 +59,8 @@ import SecurityGaurd from "./pages/SecurityGaurd";
 import VisitorLogs from "./pages/VisitorLogs";
 import SecurityProtocol from "./pages/SecurityProtocol";
 import ResidentManagement from "./pages/ResidentManagement/ResidentManagement";
+import Rm from "./pages/Rm";
+import FinancialExpense from "./pages/FinancialExpenses";
 const App = () => {
 
   const router = createBrowserRouter([
@@ -108,6 +110,15 @@ const App = () => {
           {
             path: "/securityprotocol",
             element:<SecurityProtocol />,
+          }
+          ,{
+            path: "/rm",
+            element:<Rm />,
+          }
+          ,
+          {
+            path: "/financialexpenses",
+            element:<FinancialExpense />,
           }
 
       ]

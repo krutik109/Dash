@@ -437,8 +437,8 @@ ${resident.Payment === "Cash" ? "cash" : ""}  `}
                     </div>
                     <div className="modal-body">
                       <form>
-                        <div className="mb-2">
-                          <label className="form-label">
+                        <div className="mb-2 ">
+                          <label className="form-label ">
                             Password<span className="text-danger">*</span>
                           </label>
                           <div className="d-flex ">

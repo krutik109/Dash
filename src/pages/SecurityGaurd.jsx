@@ -524,7 +524,7 @@ export default function SecurityGaurd() {
 
             {/* Add Security Modal */}
             <Modal show={showModal} onHide={handleClose} centered>
-        <Modal.Header closeButton>
+        <Modal.Header >
           <Modal.Title >{isEdit ? 'Edit Security' : 'Add Security'}
           <button
     type="button"
