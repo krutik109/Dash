@@ -22,6 +22,7 @@ import FinancialExpense from "./pages/FinancialExpenses";
 import EventParticipation from "./Resident/Event Participation/EventParticipation";
 import ActivityParticipates from "./Resident/Activity Participate/ActivityParticipates";
 import SecurityProtocols from "./Resident/Security Protocols/SecurityProtocols";
+import PollApp from "./Resident/Polls/PollApp";
 const App = () => {
 
   const router = createBrowserRouter([
@@ -89,6 +90,9 @@ const App = () => {
           },{
             path: "/securityprotocols",
             element:<SecurityProtocols/>
+          },{
+            path: "/polls",
+            element:<PollApp/>
           }
 
       ]

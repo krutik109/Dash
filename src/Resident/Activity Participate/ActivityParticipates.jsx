@@ -80,14 +80,12 @@ const ActivityParticipaes = () => {
   <div className="eventtable" style={{ overflowX: "auto" }}>
     {/* Header Row */}
     <div
-      className="row p-2 d-flex flex-row text-center text-dark"
+      className="row p-2 head d-flex flex-row text-center text-dark"
       style={{
-        backgroundColor: "#eef1fd",
-        borderRadius: "10px 10px",
-        minWidth: "900px", // Ensures columns stay properly aligned
+     // Ensures columns stay properly aligned
       }}
     >
-      <div className="col-2 fw-bold">Participator Name</div>
+      <div className="col-2 fw-bold text-start">Participator Name</div>
       <div className="col-4 fw-bold text-center">Description</div>
       <div className="col-2 fw-bold text-center">Activty Time</div>
       <div className="col-1 fw-bold text-center">Activty Date</div>
@@ -97,9 +95,9 @@ const ActivityParticipaes = () => {
     {/* Rows */}
     {events.map((event, index) => (
       <div
-        className="row border-bottom p-2 align-items-center"
+        className="row data border-bottom p-2 align-items-center"
         key={index}
-        style={{ minWidth: "900px" }}
+       
       >
         {/* Participator Name */}
         <div className="col-2 d-flex align-items-center">

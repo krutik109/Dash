@@ -38,6 +38,30 @@ const SideBar = ({ toggleSidebar }) => {
         </div>
         <h3>Resident*</h3>
 
+        
+<div className=" col-md-12  mt-1 mb-1">
+
+<NavLink
+            className="navlink"
+            to="/polls"
+            style={{
+              textDecoration: "none",
+              color: "black",
+              height: "52px",
+              width: "245px",fontStyle: "poppins",
+              fontWeight: "500",
+            }}
+            onClick={toggleSidebar}
+          >
+            {/* Close sidebar on link click in small screens */}
+            <p className=" p-2 hovermaincolor">
+              <FaTh className="" /> Polls
+            </p>
+          </NavLink>
+
+</div>
+
+
 
 <div className=" col-md-12  mt-1 mb-1">
 
